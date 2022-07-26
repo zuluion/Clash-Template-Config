@@ -1,0 +1,639 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: rule
+log-level: silent
+ipv6: false
+external-controller: '0.0.0.0:9090'
+
+profile:
+  store-selected: false
+  tracing: true
+
+proxies:
+
+proxy-groups:
+  # relay chains the proxies. proxies shall not contain a relay. No UDP support.
+  # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
+  -
+    name: 🔰国外流量
+    type: select
+    proxies:
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+      - AIRPORT
+      - 🚀直接连接
+  -
+    name: ⚓️其他流量
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀直接连接
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: ✈️Telegram
+    type: select
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎙Discord
+    type: select
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 📘Facebook
+    type: select
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎬Youtube
+    type: select
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎬Netflix
+    type: select
+    use:
+      - airport-hk
+      - airport-tw
+      - airport-sg
+      - airport-jp
+      - airport-korea
+      - airport-us
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎬哔哩哔哩
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎬国外媒体
+    type: select
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎧Spotify
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀直接连接
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎮Steam
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 💻Microsoft
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🧧Paypal
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀直接连接
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🚚Amazon
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 📡Speedtest
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🍎苹果服务
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🚀直接连接
+    type: select
+    proxies:
+      - DIRECT
+  -
+    name: AIRPORT
+    type: select
+    use:
+      - airport
+  -
+    name: AIRPORT-HK
+    type: select
+    use:
+      - airport-hk
+  -
+    name: AIRPORT-TW
+    type: select
+    use:
+      - airport-tw
+  -
+    name: AIRPORT-SG
+    type: select
+    use:
+      - airport-sg
+  -
+    name: AIRPORT-JP
+    type: select
+    use:
+      - airport-jp
+  -
+    name: AIRPORT-Korea
+    type: select
+    use:
+      - airport-korea
+  -
+    name: AIRPORT-US
+    type: select
+    use:
+      - airport-us  
+  -
+    name: AIRPORT-India
+    type: select
+    use:
+      - airport-india 
+  -
+    name: AIRPORT-EN
+    type: select
+    use:
+      - airport-en 
+  -
+    name: AIRPORT-Ireland
+    type: select
+    use:
+      - airport-ireland 
+  -
+    name: AIRPORT-RU
+    type: select
+    use:
+      - airport-ru
+  -
+    name: AIRPORT-Canada
+    type: select
+    use:
+      - airport-canada
+  -
+    name: AIRPORT-FR
+    type: select
+    use:
+      - airport-fr
+  -
+    name: AIRPORT-AU
+    type: select
+    use:
+      - airport-au
+
+proxy-providers:
+  airport:
+    type: http
+    url: "" # 这里填入机场链接
+    interval: 36000
+    path: myprovider/proxies/provider-airport.yml
+    health-check:
+      enable: true
+      interval: 36000
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+  airport-hk:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '港'
+  airport-tw:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '台湾'
+  airport-sg:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '新加坡'
+  airport-jp:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '日本'
+  airport-fr:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '法国'
+  airport-au:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '澳大利亚'
+  airport-ireland:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '爱尔兰'
+  airport-en:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '英国'
+  airport-korea:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '韩国'
+  airport-ru:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '俄罗斯'
+  airport-us:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '美国'
+  airport-canada:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '加拿大'
+  airport-india:
+    type: file
+    path: myprovider/proxies/provider-airport.yml
+    filter: '印度'
+
+rules:
+  - DOMAIN-SUFFIX,smtp,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+  - DOMAIN-SUFFIX,biliapi.com,🎬哔哩哔哩
+  - DOMAIN-SUFFIX,biliapi.net,🎬哔哩哔哩
+  - DOMAIN-SUFFIX,bilibili.com,🎬哔哩哔哩
+  - DOMAIN-SUFFIX,bilibili.tv,🎬哔哩哔哩
+  - DOMAIN-SUFFIX,bilivideo.com,🎬哔哩哔哩
+  - RULE-SET,AdBlock,REJECT
+  - RULE-SET,Proxy,🔰国外流量
+  - RULE-SET,Apple,🍎苹果服务
+  - RULE-SET,Adobe,⚓️其他流量
+  - RULE-SET,Amazon,🚚Amazon
+  - RULE-SET,Dler,⚓️其他流量
+  - RULE-SET,Facebook,📘Facebook 
+  - RULE-SET,GitHub,🔰国外流量
+  - RULE-SET,Google,🔰国外流量
+  - RULE-SET,Microsoft,💻Microsoft
+  - RULE-SET,Netflix,🎬Netflix 
+  - RULE-SET,Speedtest,📡Speedtest
+  - RULE-SET,Steam,🎮Steam
+  - RULE-SET,Spotify,🎧Spotify
+  - RULE-SET,Telegram,✈️Telegram 
+  - RULE-SET,Twitter,🔰国外流量 
+  - RULE-SET,Tencent,🚀直接连接
+  - RULE-SET,YouTube,🎬Youtube 
+  - RULE-SET,PayPal,🧧Paypal 
+  - RULE-SET,PayPal,🧧Paypal
+  - RULE-SET,Discord,🎙Discord
+  - DOMAIN-SUFFIX,live.cn,🚀直接连接
+
+  - GEOIP,CN,DIRECT
+  - MATCH,⚓️其他流量
+
+rule-providers:
+  AdBlock: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/AdBlock.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/AdBlock.yaml
+    interval: 3600
+  Apple: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Apple.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Apple.yaml
+    interval: 3600
+  Adobe: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Adobe.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Adobe.yaml
+    interval: 3600
+  Amazon: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Amazon.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Amazon.yaml
+    interval: 3600
+  China: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/China.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/China.yaml
+    interval: 3600
+  Dler: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Dler.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Dler.yaml
+    interval: 3600
+  Facebook: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Facebook.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Facebook.yaml
+    interval: 3600
+  GitHub: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/GitHub.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/GitHub.yaml
+    interval: 3600
+  Google: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Google.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Google.yaml
+    interval: 3600
+  Microsoft: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Microsoft.yaml
+    interval: 3600
+  Netflix: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Netflix.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Netflix.yaml
+    interval: 3600
+  Spotify: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Spotify.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Spotify.yaml
+    interval: 3600
+  Speedtest: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Speedtest.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Speedtest.yaml
+    interval: 3600
+  Steam: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Steam.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Steam.yaml
+    interval: 3600
+  Telegram: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Telegram.yaml
+    interval: 3600
+  Twitter: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Twitter.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Twitter.yaml
+    interval: 3600
+  Tencent: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Tencent.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Tencent.yaml
+    interval: 3600
+  YouTube: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/YouTube.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/YouTube.yaml
+    interval: 3600
+  PayPal: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/PayPal.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/PayPal.yaml
+    interval: 3600
+  Discord: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Discord.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Discord.yaml
+    interval: 3600
+  Proxy: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Proxy.yaml
+    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Proxy.yaml
+    interval: 3600
