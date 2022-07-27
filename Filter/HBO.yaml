@@ -1,0 +1,14 @@
+payload:
+  # > HBO GO Asia
+  - DOMAIN-KEYWORD,hbogoasia
+  - DOMAIN-SUFFIX,hboasia.com
+  - DOMAIN-SUFFIX,hbogoasia.com
+  - DOMAIN,hbolb.onwardsmg.com
+  - DOMAIN,hbounify-prod.evergent.com
+  - DOMAIN,dai3fd1oh325y.cloudfront.net
+  # > HBO Max
+  - PROCESS-NAME,com.hbo.hbonow
+  - DOMAIN-SUFFIX,hbo.com
+  - DOMAIN-SUFFIX,hbonow.com
+  - DOMAIN-SUFFIX,hbomax.com
+  - DOMAIN-SUFFIX,hbomaxcdn.com
