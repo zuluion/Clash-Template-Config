@@ -1,0 +1,10 @@
+payload:
+  # > Hulu
+  - DOMAIN-SUFFIX,hulu.com
+  - DOMAIN-SUFFIX,huluim.com
+  - DOMAIN-SUFFIX,hulustream.com
+  - DOMAIN,cws-hulu.conviva.com
+  # > Hulu JP
+  - DOMAIN-SUFFIX,hulu.jp
+  - DOMAIN-SUFFIX,happyon.jp
+  - DOMAIN-SUFFIX,prod.hjholdings.tv
