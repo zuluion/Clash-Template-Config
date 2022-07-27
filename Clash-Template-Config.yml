@@ -558,7 +558,7 @@ rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.haishan.me,🔰国外流量
   - RULE-SET,Process,DIRECT
   - RULE-SET,AdBlock,REJECT
   - RULE-SET,Apple,🍎苹果服务
@@ -583,6 +583,7 @@ rules:
   - RULE-SET,PayPal,🧧Paypal
   - RULE-SET,Discord,🎙Discord
   - RULE-SET,Proxy,🔰国外流量
+  - RULE-SET,Direct,DIRECT
   - DOMAIN-SUFFIX,live.cn,🚀直接连接
 
   - GEOIP,CN,DIRECT
@@ -738,4 +739,10 @@ rule-providers:
     behavior: classical
     path: myprovider/ruleset/HBO.yaml
     url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/HBO.yaml
+    interval: 3600
+  Direct: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Direct.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Direct.yaml
     interval: 3600
