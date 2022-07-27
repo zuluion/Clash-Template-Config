@@ -12,6 +12,7 @@
 + [Apple](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Apple.yaml)
 + [BiliBili](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Bilibili.yaml)
 + [China](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/China.yaml)
++ [Direct](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Direct.yaml)
 + [Discord](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Discord.yaml)
 + [DisneyPlus](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DisneyPlus.yaml)
 + [Facebook](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Facebook.yaml)
