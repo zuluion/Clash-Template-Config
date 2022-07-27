@@ -561,7 +561,6 @@ rules:
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,Process,DIRECT
   - RULE-SET,AdBlock,REJECT
-  - RULE-SET,Proxy,🔰国外流量
   - RULE-SET,Apple,🍎苹果服务
   - RULE-SET,Adobe,⚓️其他流量
   - RULE-SET,Amazon,🚚Amazon
@@ -583,6 +582,7 @@ rules:
   - RULE-SET,YouTube,🎬Youtube 
   - RULE-SET,PayPal,🧧Paypal
   - RULE-SET,Discord,🎙Discord
+  - RULE-SET,Proxy,🔰国外流量
   - DOMAIN-SUFFIX,live.cn,🚀直接连接
 
   - GEOIP,CN,DIRECT
