@@ -158,6 +158,84 @@ proxy-groups:
       - AIRPORT-FR
       - AIRPORT-AU
   -
+    name: 🎬DisneyPlus
+    type: select
+    use:
+      - airport-hk
+      - airport-tw
+      - airport-sg
+      - airport-jp
+      - airport-korea
+      - airport-us
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎬Hulu
+    type: select
+    use:
+      - airport-hk
+      - airport-tw
+      - airport-sg
+      - airport-jp
+      - airport-korea
+      - airport-us
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
+    name: 🎬HBO
+    type: select
+    use:
+      - airport-hk
+      - airport-tw
+      - airport-sg
+      - airport-jp
+      - airport-korea
+      - airport-us
+    proxies:
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
     name: 🎬哔哩哔哩
     type: select
     proxies:
@@ -493,6 +571,9 @@ rules:
   - RULE-SET,Google,🔰国外流量
   - RULE-SET,Microsoft,💻Microsoft
   - RULE-SET,Netflix,🎬Netflix 
+  - RULE-SET,DisneyPlus,🎬DisneyPlus 
+  - RULE-SET,Hulu,🎬Hulu
+  - RULE-SET,HBO,🎬HBO
   - RULE-SET,Speedtest,📡Speedtest
   - RULE-SET,Steam,🎮Steam
   - RULE-SET,Spotify,🎧Spotify
@@ -512,31 +593,31 @@ rule-providers:
     type: http
     behavior: classical
     path: myprovider/ruleset/AdBlock.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/AdBlock.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/AdBlock.yaml
     interval: 3600
   Apple: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Apple.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Apple.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Apple.yaml
     interval: 3600
   Adobe: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Adobe.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Adobe.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Adobe.yaml
     interval: 3600
   Amazon: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Amazon.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Amazon.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Amazon.yaml
     interval: 3600
   China: 
     type: http
     behavior: classical
     path: myprovider/ruleset/China.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/China.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/China.yaml
     interval: 3600
   BiliBili: 
     type: http
@@ -548,95 +629,113 @@ rule-providers:
     type: http
     behavior: classical
     path: myprovider/ruleset/Facebook.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Facebook.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Facebook.yaml
     interval: 3600
   GitHub: 
     type: http
     behavior: classical
     path: myprovider/ruleset/GitHub.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/GitHub.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/GitHub.yaml
     interval: 3600
   Google: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Google.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Google.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Google.yaml
     interval: 3600
   Microsoft: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Microsoft.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Microsoft.yaml
     interval: 3600
   Netflix: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Netflix.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Netflix.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Netflix.yaml
     interval: 3600
   Spotify: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Spotify.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Spotify.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Spotify.yaml
     interval: 3600
   Speedtest: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Speedtest.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Speedtest.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Speedtest.yaml
     interval: 3600
   Steam: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Steam.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Steam.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Steam.yaml
     interval: 3600
   Telegram: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Telegram.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Telegram.yaml
     interval: 3600
   Twitter: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Twitter.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Twitter.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Twitter.yaml
     interval: 3600
   Tencent: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Tencent.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Tencent.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Tencent.yaml
     interval: 3600
   YouTube: 
     type: http
     behavior: classical
     path: myprovider/ruleset/YouTube.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/YouTube.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/YouTube.yaml
     interval: 3600
   PayPal: 
     type: http
     behavior: classical
     path: myprovider/ruleset/PayPal.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/PayPal.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/PayPal.yaml
     interval: 3600
   Discord: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Discord.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Discord.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Discord.yaml
     interval: 3600
   Proxy: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Proxy.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Proxy.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Proxy.yaml
     interval: 3600
   Process: 
     type: http
     behavior: classical
     path: myprovider/ruleset/Process.yaml
     url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/ProcessFilter.yaml
+    interval: 3600
+  DisneyPlus: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/DisneyPlus.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DisneyPlus.yaml
+    interval: 3600
+  Hulu: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Hulu.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Hulu.yaml
+    interval: 3600
+  HBO: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/HBO.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/HBO.yaml
     interval: 3600
