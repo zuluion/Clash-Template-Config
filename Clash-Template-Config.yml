@@ -479,63 +479,15 @@ proxy-providers:
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
-  - PROCESS-NAME,v2ray,DIRECT
-  - PROCESS-NAME,xray,DIRECT
-  - PROCESS-NAME,naive,DIRECT
-  - PROCESS-NAME,trojan,DIRECT
-  - PROCESS-NAME,trojan-go,DIRECT
-  - PROCESS-NAME,ss-local,DIRECT
-  - PROCESS-NAME,privoxy,DIRECT
-  - PROCESS-NAME,leaf,DIRECT
-  - PROCESS-NAME,v2ray.exe,DIRECT
-  - PROCESS-NAME,xray.exe,DIRECT
-  - PROCESS-NAME,naive.exe,DIRECT
-  - PROCESS-NAME,trojan.exe,DIRECT
-  - PROCESS-NAME,trojan-go.exe,DIRECT
-  - PROCESS-NAME,ss-local.exe,DIRECT
-  - PROCESS-NAME,privoxy.exe,DIRECT
-  - PROCESS-NAME,leaf.exe,DIRECT
-  - PROCESS-NAME,Surge,DIRECT
-  - PROCESS-NAME,Surge 2,DIRECT
-  - PROCESS-NAME,Surge 3,DIRECT
-  - PROCESS-NAME,Surge 4,DIRECT
-  - PROCESS-NAME,Surge%202,DIRECT
-  - PROCESS-NAME,Surge%203,DIRECT
-  - PROCESS-NAME,Surge%204,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,qBittorrent,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - PROCESS-NAME,aria2c.exe,DIRECT
-  - PROCESS-NAME,BitComet.exe,DIRECT
-  - PROCESS-NAME,fdm.exe,DIRECT
-  - PROCESS-NAME,NetTransport.exe,DIRECT
-  - PROCESS-NAME,qbittorrent.exe,DIRECT
-  - PROCESS-NAME,Thunder.exe,DIRECT
-  - PROCESS-NAME,ThunderVIP.exe,DIRECT
-  - PROCESS-NAME,transmission-daemon.exe,DIRECT
-  - PROCESS-NAME,transmission-qt.exe,DIRECT
-  - PROCESS-NAME,uTorrent.exe,DIRECT
-  - PROCESS-NAME,WebTorrent.exe,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN-SUFFIX,biliapi.com,🎬哔哩哔哩
-  - DOMAIN-SUFFIX,biliapi.net,🎬哔哩哔哩
-  - DOMAIN-SUFFIX,bilibili.com,🎬哔哩哔哩
-  - DOMAIN-SUFFIX,bilibili.tv,🎬哔哩哔哩
-  - DOMAIN-SUFFIX,bilivideo.com,🎬哔哩哔哩
+  - RULE-SET,Process,DIRECT
   - RULE-SET,AdBlock,REJECT
   - RULE-SET,Proxy,🔰国外流量
   - RULE-SET,Apple,🍎苹果服务
   - RULE-SET,Adobe,⚓️其他流量
   - RULE-SET,Amazon,🚚Amazon
-  - RULE-SET,Dler,⚓️其他流量
+  - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,Facebook,📘Facebook 
   - RULE-SET,GitHub,🔰国外流量
   - RULE-SET,Google,🔰国外流量
@@ -548,7 +500,6 @@ rules:
   - RULE-SET,Twitter,🔰国外流量 
   - RULE-SET,Tencent,🚀直接连接
   - RULE-SET,YouTube,🎬Youtube 
-  - RULE-SET,PayPal,🧧Paypal 
   - RULE-SET,PayPal,🧧Paypal
   - RULE-SET,Discord,🎙Discord
   - DOMAIN-SUFFIX,live.cn,🚀直接连接
@@ -587,11 +538,11 @@ rule-providers:
     path: myprovider/ruleset/China.yaml
     url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/China.yaml
     interval: 3600
-  Dler: 
+  BiliBili: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Dler.yaml
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Dler.yaml
+    path: myprovider/ruleset/BiliBili.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Bilibili.yaml
     interval: 3600
   Facebook: 
     type: http
@@ -682,4 +633,10 @@ rule-providers:
     behavior: classical
     path: myprovider/ruleset/Proxy.yaml
     url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Proxy.yaml
+    interval: 3600
+  Process: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/Process.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/ProcessFilter.yaml
     interval: 3600
