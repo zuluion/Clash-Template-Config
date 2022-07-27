@@ -31,3 +31,5 @@
 + [DisneyPlus](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DisneyPlus.yaml)
 + [Hulu](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Hulu.yaml)
 + [HBO](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/HBO.yaml)
+
+> PS: Hulu 和 HBO 包含了不同地区的域名规则，建议实际应用中拆分开，因暂无这两个流媒体的实际应用需求，故未将其分开
