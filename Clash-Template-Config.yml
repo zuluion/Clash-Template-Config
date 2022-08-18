@@ -584,7 +584,6 @@ rules:
   - RULE-SET,Adobe,⚓️其他流量
   - RULE-SET,Amazon,🚚Amazon
   - RULE-SET,BiliBili,🎬哔哩哔哩
-  - RULE-SET,Facebook,📘Facebook 
   - RULE-SET,GitHub,🔰国外流量
   - RULE-SET,Google,🔰国外流量
   - RULE-SET,Microsoft,💻Microsoft
@@ -602,6 +601,7 @@ rules:
   - RULE-SET,YouTube,🎬Youtube 
   - RULE-SET,PayPal,🧧Paypal
   - RULE-SET,Discord,🎙Discord
+  - RULE-SET,Facebook,📘Facebook 
   - RULE-SET,Proxy,🔰国外流量
   - RULE-SET,Direct,DIRECT
   - DOMAIN-SUFFIX,live.cn,🚀直接连接
