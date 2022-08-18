@@ -31,6 +31,7 @@
 + [Telegram](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Telegram.yaml)
 + [Twitter](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Twitter.yaml)
 + [Tencent](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Tencent.yaml)
++ [TikTok](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/TikTok.yaml)
 + [YouTube](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/YouTube.yaml)
 
 > PS: Hulu 和 HBO 包含了不同地区的域名规则，建议实际应用中拆分开，因暂无这两个流媒体的实际应用需求，故未将其分开
