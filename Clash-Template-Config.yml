@@ -132,6 +132,25 @@ proxy-groups:
       - AIRPORT-FR
       - AIRPORT-AU
   -
+    name: 🎬TikTok
+    type: select
+    proxies:
+      - AIRPORT-US
+      - 🔰国外流量
+      - AIRPORT
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+  -
     name: 🎬Netflix
     type: select
     use:
@@ -573,6 +592,7 @@ rules:
   - RULE-SET,DisneyPlus,🎬DisneyPlus 
   - RULE-SET,Hulu,🎬Hulu
   - RULE-SET,HBO,🎬HBO
+  - RULE-SET,TikTok,🎬TikTok
   - RULE-SET,Speedtest,📡Speedtest
   - RULE-SET,Steam,🎮Steam
   - RULE-SET,Spotify,🎧Spotify
@@ -697,6 +717,12 @@ rule-providers:
     behavior: classical
     path: myprovider/ruleset/YouTube.yaml
     url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/YouTube.yaml
+    interval: 3600
+  TikTok: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/TikTok.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/TikTok.yaml
     interval: 3600
   PayPal: 
     type: http
