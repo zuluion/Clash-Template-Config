@@ -434,6 +434,12 @@ proxy-groups:
       - AIRPORT-FR
       - AIRPORT-AU
   -
+    name: 🔽IDM
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+  -
     name: 🚀直接连接
     type: select
     proxies:
@@ -578,7 +584,9 @@ rules:
   - DOMAIN-KEYWORD,aria2,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
-  - RULE-SET,Process,DIRECT
+  - RULE-SET,IDM,🔽IDM
+  - RULE-SET,DownLoadClient,DIRECT
+  - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
   - RULE-SET,Apple,🍎苹果服务
   - RULE-SET,Adobe,⚓️其他流量
@@ -742,11 +750,11 @@ rule-providers:
     path: myprovider/ruleset/Proxy.yaml
     url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Proxy.yaml
     interval: 3600
-  Process: 
+  ProxyClient: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Process.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/ProcessFilter.yaml
+    path: myprovider/ruleset/ProxyClient.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/ProxyClient.yaml
     interval: 3600
   DisneyPlus: 
     type: http
@@ -771,4 +779,16 @@ rule-providers:
     behavior: classical
     path: myprovider/ruleset/Direct.yaml
     url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Direct.yaml
+    interval: 3600
+  DownLoadClient: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/DownLoadClient.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DownLoadClient.yaml
+    interval: 3600
+  IDM: 
+    type: http
+    behavior: classical
+    path: myprovider/ruleset/IDM.yaml
+    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/IDM.yaml
     interval: 3600
