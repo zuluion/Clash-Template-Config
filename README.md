@@ -36,4 +36,6 @@
 + [TikTok](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/TikTok.yaml)
 + [YouTube](https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/YouTube.yaml)
 
-> PS: Hulu 和 HBO 包含了不同地区的域名规则，建议实际应用中拆分开，因暂无这两个流媒体的实际应用需求，故未将其分开
+> PS: 
+> 1. Hulu 和 HBO 包含了不同地区的域名规则，建议实际应用中拆分开，因暂无这两个流媒体的实际应用需求，故未将其分开
+> 2. IDM 并不支持BT和磁力链接，因此单独区分开，并设置相应的策略组，默认走直连，也可以前端手动改成走国内流量
