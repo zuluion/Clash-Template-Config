@@ -1,3 +1,186 @@
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 基础数据 设置锚点 复用 
+BASE-DATA:
+  common:
+    health-check-url: &health-check-url http://www.gstatic.com/generate_204
+    proxies-all: &proxies-all
+      - 🔰国外流量
+      - 🚀直接连接
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+      - AIRPORT
+    proxies-all-fdirect: &proxies-all-fdirect
+      - 🚀直接连接
+      - 🔰国外流量
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+      - AIRPORT
+    proxies-all-oforeign: &proxies-all-oforeign
+      - AIRPORT-HK
+      - AIRPORT-TW
+      - AIRPORT-SG
+      - AIRPORT-JP
+      - AIRPORT-Korea
+      - AIRPORT-US
+      - AIRPORT-India
+      - AIRPORT-EN
+      - AIRPORT-Ireland
+      - AIRPORT-RU
+      - AIRPORT-Canada
+      - AIRPORT-FR
+      - AIRPORT-AU
+      - AIRPORT
+    proxies-use-special-streaming-media: &proxies-use-special-streaming-media
+      - airport-hk
+      - airport-tw
+      - airport-sg
+      - airport-jp
+      - airport-korea
+      - airport-us
+  
+  proxy-providers-config:
+    proxy-providers-common:
+      airport-interval: &airport-interval 36000
+      url-airport: &url-airport "" # 这里填入机场链接
+      proxy-file-path-AirPort: &proxy-file-path-AirPort myprovider/proxies/provider-airport.yml
+    proxy-providers-filter:
+      proxy-filter-HK: &proxy-filter-HK '港'
+      proxy-filter-TW: &proxy-filter-TW '台湾'
+      proxy-filter-SG: &proxy-filter-SG '新加坡'
+      proxy-filter-JP: &proxy-filter-JP '日本'
+      proxy-filter-FR: &proxy-filter-FR '法国'
+      proxy-filter-AU: &proxy-filter-AU '澳大利亚'
+      proxy-filter-Ireland: &proxy-filter-Ireland '爱尔兰'
+      proxy-filter-EN: &proxy-filter-EN '英国'
+      proxy-filter-Korea: &proxy-filter-Korea '韩国'
+      proxy-filter-RU: &proxy-filter-RU '俄罗斯'
+      proxy-filter-US: &proxy-filter-US '美国'
+      proxy-filter-Canada: &proxy-filter-Canada '加拿大'
+      proxy-filter-India: &proxy-filter-India '印度'
+      proxy-filter-TR: &proxy-filter-TR '土耳其'
+      proxy-filter-TL: &proxy-filter-TL '泰国'
+      proxy-filter-AGT: &proxy-filter-AGT '阿根廷'
+      proxy-filter-PLP: &proxy-filter-PLP '菲律宾'
+      proxy-filter-Malaysia: &proxy-filter-Malaysia '马来西亚'
+  
+  rule-providers-config:
+    rule-providers-common:
+      rule-interval: &rule-interval 3600
+    rule-providers-group:
+      AdBlock:
+        rule-file-path-AdBlock: &rule-file-path-AdBlock myprovider/ruleset/AdBlock.yaml
+        rule-provider-url-AdBlock: &rule-provider-url-AdBlock https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/AdBlock.yaml
+      Apple:
+        rule-file-path-Apple: &rule-file-path-Apple myprovider/ruleset/Apple.yaml
+        rule-provider-url-Apple: &rule-provider-url-Apple https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Apple.yaml
+      Adobe:
+        rule-file-path-Adobe: &rule-file-path-Adobe myprovider/ruleset/Adobe.yaml
+        rule-provider-url-Adobe: &rule-provider-url-Adobe https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Adobe.yaml
+      Amazon:
+        rule-file-path-Amazon: &rule-file-path-Amazon myprovider/ruleset/Amazon.yaml
+        rule-provider-url-Amazon: &rule-provider-url-Amazon https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Amazon.yaml
+      China:
+        rule-file-path-China: &rule-file-path-China myprovider/ruleset/China.yaml
+        rule-provider-url-China: &rule-provider-url-China https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/China.yaml
+      Bilibili:
+        rule-file-path-Bilibili: &rule-file-path-BiliBili myprovider/ruleset/Bilibili.yaml
+        rule-provider-url-BiliBili: &rule-provider-url-BiliBili https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Bilibili.yaml
+      Facebook:
+        rule-file-path-Facebook: &rule-file-path-Facebook myprovider/ruleset/Facebook.yaml
+        rule-provider-url-Facebook: &rule-provider-url-Facebook https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Facebook.yaml
+      GitHub: 
+        rule-file-path-GitHub: &rule-file-path-GitHub myprovider/ruleset/GitHub.yaml
+        rule-provider-url-GitHub: &rule-provider-url-GitHub https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/GitHub.yaml
+      Google:
+        rule-file-path-Google: &rule-file-path-Google myprovider/ruleset/Google.yaml
+        rule-provider-url-Google: &rule-provider-url-Google https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Google.yaml
+      Microsoft:
+        rule-file-path-Microsoft: &rule-file-path-Microsoft myprovider/ruleset/Microsoft.yaml
+        rule-provider-url-Microsoft: &rule-provider-url-Microsoft https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Microsoft.yaml
+      Netflix:
+        rule-file-path-Netflix: &rule-file-path-Netflix myprovider/ruleset/Netflix.yaml
+        rule-provider-url-Netflix: &rule-provider-url-Netflix https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Netflix.yaml
+      Spotify:
+        rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
+        rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Spotify.yaml
+      Speedtest:
+        rule-file-path-Speedtest: &rule-file-path-Speedtest myprovider/ruleset/Speedtest.yaml
+        rule-provider-url-Speedtest: &rule-provider-url-Speedtest https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Speedtest.yaml
+      Steam:
+        rule-file-path-Steam: &rule-file-path-Steam myprovider/ruleset/Steam.yaml
+        rule-provider-url-Steam: &rule-provider-url-Steam https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Steam.yaml
+      Telegram:
+        rule-file-path-Telegram: &rule-file-path-Telegram myprovider/ruleset/Telegram.yaml
+        rule-provider-url-Telegram: &rule-provider-url-Telegram https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Telegram.yaml
+      Twitter:
+        rule-file-path-Twitter: &rule-file-path-Twitter myprovider/ruleset/Twitter.yaml
+        rule-provider-url-Twitter: &rule-provider-url-Twitter https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Twitter.yaml
+      Tencent:
+        rule-file-path-Tencent: &rule-file-path-Tencent myprovider/ruleset/Tencent.yaml
+        rule-provider-url-Tencent: &rule-provider-url-Tencent https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Tencent.yaml
+      YouTube:
+        rule-file-path-YouTube: &rule-file-path-YouTube myprovider/ruleset/YouTube.yaml
+        rule-provider-url-YouTube: &rule-provider-url-YouTube https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/YouTube.yaml
+      TikTok:
+        rule-file-path-TikTok: &rule-file-path-TikTok  myprovider/ruleset/TikTok.yaml
+        rule-provider-url-TikTok: &rule-provider-url-TikTok  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/TikTok.yaml
+      PayPal:
+        rule-file-path-PayPal: &rule-file-path-PayPal  myprovider/ruleset/PayPal.yaml
+        rule-provider-url-PayPal: &rule-provider-url-PayPal  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/PayPal.yaml
+      Discord:
+        rule-file-path-Discord: &rule-file-path-Discord  myprovider/ruleset/Discord.yaml
+        rule-provider-url-Discord: &rule-provider-url-Discord  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Discord.yaml
+      Proxy:
+        rule-file-path-Proxy: &rule-file-path-Proxy  myprovider/ruleset/Proxy.yaml
+        rule-provider-url-Proxy: &rule-provider-url-Proxy  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Proxy.yaml
+      ProxyClient:
+        rule-file-path-ProxyClient: &rule-file-path-ProxyClient  myprovider/ruleset/ProxyClient.yaml
+        rule-provider-url-ProxyClient: &rule-provider-url-ProxyClient  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/ProxyClient.yaml
+      DisneyPlus:
+        rule-file-path-DisneyPlus: &rule-file-path-DisneyPlus  myprovider/ruleset/DisneyPlus.yaml
+        rule-provider-url-DisneyPlus: &rule-provider-url-DisneyPlus  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DisneyPlus.yaml
+      Hulu:
+        rule-file-path-Hulu: &rule-file-path-Hulu  myprovider/ruleset/Hulu.yaml
+        rule-provider-url-Hulu: &rule-provider-url-Hulu  https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Hulu.yaml
+      HBO:
+        rule-file-path-HBO: &rule-file-path-HBO myprovider/ruleset/HBO.yaml
+        rule-provider-url-HBO: &rule-provider-url-HBO https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/HBO.yaml
+      Direct:
+        rule-file-path-Direct: &rule-file-path-Direct myprovider/ruleset/Direct.yaml
+        rule-provider-url-Direct: &rule-provider-url-Direct https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Direct.yaml
+      DownLoadClient:
+        rule-file-path-DownLoadClient: &rule-file-path-DownLoadClient myprovider/ruleset/DownLoadClient.yaml
+        rule-provider-url-DownLoadClient: &rule-provider-url-DownLoadClient https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DownLoadClient.yaml
+      IDM:
+        rule-file-path-IDM: &rule-file-path-IDM myprovider/ruleset/IDM.yaml
+        rule-provider-url-IDM: &rule-provider-url-IDM https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/IDM.yaml
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -20,117 +203,32 @@ proxy-groups:
     name: 🔰国外流量
     type: select
     proxies:
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
-      - AIRPORT
-      - 🚀直接连接
+      *proxies-all-oforeign
   -
     name: ⚓️其他流量
     type: select
     proxies:
-      - 🔰国外流量
-      - 🚀直接连接
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: ✈️Telegram
     type: select
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎙Discord
     type: select
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 📘Facebook
     type: select
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎬Youtube
     type: select
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎬TikTok
     type: select
@@ -154,285 +252,75 @@ proxy-groups:
     name: 🎬Netflix
     type: select
     use:
-      - airport-hk
-      - airport-tw
-      - airport-sg
-      - airport-jp
-      - airport-korea
-      - airport-us
+      *proxies-use-special-streaming-media
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎬DisneyPlus
     type: select
     use:
-      - airport-hk
-      - airport-tw
-      - airport-sg
-      - airport-jp
-      - airport-korea
-      - airport-us
+      *proxies-use-special-streaming-media
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎬Hulu
     type: select
     use:
-      - airport-hk
-      - airport-tw
-      - airport-sg
-      - airport-jp
-      - airport-korea
-      - airport-us
+      *proxies-use-special-streaming-media
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎬HBO
     type: select
     use:
-      - airport-hk
-      - airport-tw
-      - airport-sg
-      - airport-jp
-      - airport-korea
-      - airport-us
+      *proxies-use-special-streaming-media
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎬哔哩哔哩
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all-fdirect
   -
     name: 🎬国外媒体
     type: select
     proxies:
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎧Spotify
     type: select
     proxies:
-      - 🔰国外流量
-      - 🚀直接连接
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🎮Steam
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all-fdirect
   -
     name: 💻Microsoft
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all-fdirect
   -
     name: 🧧Paypal
     type: select
     proxies:
-      - 🔰国外流量
-      - 🚀直接连接
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all
   -
     name: 🚚Amazon
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all-fdirect
   -
     name: 📡Speedtest
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all-fdirect
   -
     name: 🍎苹果服务
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
-      - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      *proxies-all-fdirect
   -
     name: 🔽IDM
     type: select
@@ -514,70 +402,100 @@ proxy-groups:
     type: select
     use:
       - airport-au
+  -
+    name: PAOCHE
+    type: select
+    use:
+      - paoche
+  -
+    name: PAOCHE-TR
+    type: select
+    use:
+      - paoche-tr
+  -
+    name: PAOCHE-TL
+    type: select
+    use:
+      - paoche-tl
+  -
+    name: PAOCHE-AGT
+    type: select
+    use:
+      - paoche-agt
+  -
+    name: PAOCHE-PLP
+    type: select
+    use:
+      - paoche-plp
+  -
+    name: PAOCHE-Malaysia
+    type: select
+    use:
+      - paoche-malaysia
 
 proxy-providers:
   airport:
     type: http
-    url: "" # 这里填入机场链接
-    interval: 36000
-    path: myprovider/proxies/provider-airport.yml
+    url: *url-airport 
+    interval: *airport-interval
+    path: *proxy-file-path-AirPort
     health-check:
       enable: true
-      interval: 36000
+      interval: *airport-interval
       # lazy: true
-      url: http://www.gstatic.com/generate_204
+      url: *health-check-url
   airport-hk:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '港'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-HK
   airport-tw:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '台湾'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-TW 
   airport-sg:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '新加坡'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-SG 
   airport-jp:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '日本'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-JP 
   airport-fr:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '法国'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-FR
   airport-au:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '澳大利亚'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-AU
   airport-ireland:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '爱尔兰'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-Ireland
   airport-en:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '英国'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-EN
   airport-korea:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '韩国'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-Korea
   airport-ru:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '俄罗斯'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-RU
   airport-us:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '美国'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-US
   airport-canada:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '加拿大'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-Canada
   airport-india:
     type: file
-    path: myprovider/proxies/provider-airport.yml
-    filter: '印度'
+    path: *proxy-file-path-AirPort
+    filter: *proxy-filter-India
 
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
@@ -621,174 +539,174 @@ rule-providers:
   AdBlock: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/AdBlock.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/AdBlock.yaml
-    interval: 3600
+    path: *rule-file-path-AdBlock
+    url: *rule-provider-url-AdBlock
+    interval: *rule-interval
   Apple: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Apple.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Apple.yaml
-    interval: 3600
+    path: *rule-file-path-Apple
+    url: *rule-provider-url-Apple
+    interval: *rule-interval
   Adobe: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Adobe.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Adobe.yaml
-    interval: 3600
+    path: *rule-file-path-Adobe
+    url: *rule-provider-url-Adobe
+    interval: *rule-interval
   Amazon: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Amazon.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Amazon.yaml
-    interval: 3600
+    path: *rule-file-path-Amazon
+    url: *rule-provider-url-Amazon
+    interval: *rule-interval
   China: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/China.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/China.yaml
-    interval: 3600
+    path: *rule-file-path-China
+    url: *rule-provider-url-China
+    interval: *rule-interval
   BiliBili: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/BiliBili.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Bilibili.yaml
-    interval: 3600
+    path: *rule-file-path-BiliBili
+    url: *rule-provider-url-BiliBili
+    interval: *rule-interval
   Facebook: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Facebook.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Facebook.yaml
-    interval: 3600
+    path: *rule-file-path-Facebook
+    url: *rule-provider-url-Facebook
+    interval: *rule-interval
   GitHub: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/GitHub.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/GitHub.yaml
-    interval: 3600
+    path: *rule-file-path-GitHub
+    url: *rule-provider-url-GitHub
+    interval: *rule-interval
   Google: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Google.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Google.yaml
-    interval: 3600
+    path: *rule-file-path-Google
+    url: *rule-provider-url-Google
+    interval: *rule-interval
   Microsoft: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Microsoft.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Microsoft.yaml
-    interval: 3600
+    path: *rule-file-path-Microsoft
+    url: *rule-provider-url-Microsoft
+    interval: *rule-interval
   Netflix: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Netflix.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Netflix.yaml
-    interval: 3600
+    path: *rule-file-path-Netflix
+    url: *rule-provider-url-Netflix
+    interval: *rule-interval
   Spotify: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Spotify.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Spotify.yaml
-    interval: 3600
+    path: *rule-file-path-Spotify
+    url: *rule-provider-url-Spotify
+    interval: *rule-interval
   Speedtest: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Speedtest.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Speedtest.yaml
-    interval: 3600
+    path: *rule-file-path-Speedtest
+    url: *rule-provider-url-Speedtest
+    interval: *rule-interval
   Steam: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Steam.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Steam.yaml
-    interval: 3600
+    path: *rule-file-path-Steam
+    url: *rule-provider-url-Steam
+    interval: *rule-interval
   Telegram: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Telegram.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Telegram.yaml
-    interval: 3600
+    path: *rule-file-path-Telegram
+    url: *rule-provider-url-Telegram
+    interval: *rule-interval
   Twitter: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Twitter.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Twitter.yaml
-    interval: 3600
+    path: *rule-file-path-Twitter
+    url: *rule-provider-url-Twitter
+    interval: *rule-interval
   Tencent: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Tencent.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Tencent.yaml
-    interval: 3600
+    path: *rule-file-path-Tencent
+    url: *rule-provider-url-Tencent
+    interval: *rule-interval
   YouTube: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/YouTube.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/YouTube.yaml
-    interval: 3600
+    path: *rule-file-path-YouTube
+    url: *rule-provider-url-YouTube
+    interval: *rule-interval
   TikTok: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/TikTok.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/TikTok.yaml
-    interval: 3600
+    path: *rule-file-path-TikTok
+    url: *rule-provider-url-TikTok 
+    interval: *rule-interval
   PayPal: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/PayPal.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/PayPal.yaml
-    interval: 3600
+    path: *rule-file-path-PayPal
+    url: *rule-provider-url-PayPal 
+    interval: *rule-interval
   Discord: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Discord.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Discord.yaml
-    interval: 3600
+    path: *rule-file-path-Discord
+    url: *rule-provider-url-Discord 
+    interval: *rule-interval
   Proxy: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Proxy.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Proxy.yaml
-    interval: 3600
+    path: *rule-file-path-Proxy
+    url: *rule-provider-url-Proxy 
+    interval: *rule-interval
   ProxyClient: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/ProxyClient.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/ProxyClient.yaml
-    interval: 3600
+    path: *rule-file-path-ProxyClient
+    url: *rule-provider-url-ProxyClient 
+    interval: *rule-interval
   DisneyPlus: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/DisneyPlus.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DisneyPlus.yaml
-    interval: 3600
+    path: *rule-file-path-DisneyPlus
+    url: *rule-provider-url-DisneyPlus 
+    interval: *rule-interval
   Hulu: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Hulu.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Hulu.yaml
-    interval: 3600
+    path: *rule-file-path-Hulu
+    url: *rule-provider-url-Hulu 
+    interval: *rule-interval
   HBO: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/HBO.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/HBO.yaml
-    interval: 3600
+    path: *rule-file-path-HBO
+    url: *rule-provider-url-HBO
+    interval: *rule-interval
   Direct: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/Direct.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/Direct.yaml
-    interval: 3600
+    path: *rule-file-path-Direct
+    url: *rule-provider-url-Direct
+    interval: *rule-interval
   DownLoadClient: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/DownLoadClient.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/DownLoadClient.yaml
-    interval: 3600
+    path: *rule-file-path-DownLoadClient
+    url: *rule-provider-url-DownLoadClient
+    interval: *rule-interval
   IDM: 
     type: http
     behavior: classical
-    path: myprovider/ruleset/IDM.yaml
-    url: https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Filter/IDM.yaml
-    interval: 3600
+    path: *rule-file-path-IDM
+    url: *rule-provider-url-IDM
+    interval: *rule-interval
