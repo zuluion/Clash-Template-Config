@@ -402,36 +402,6 @@ proxy-groups:
     type: select
     use:
       - airport-au
-  -
-    name: PAOCHE
-    type: select
-    use:
-      - paoche
-  -
-    name: PAOCHE-TR
-    type: select
-    use:
-      - paoche-tr
-  -
-    name: PAOCHE-TL
-    type: select
-    use:
-      - paoche-tl
-  -
-    name: PAOCHE-AGT
-    type: select
-    use:
-      - paoche-agt
-  -
-    name: PAOCHE-PLP
-    type: select
-    use:
-      - paoche-plp
-  -
-    name: PAOCHE-Malaysia
-    type: select
-    use:
-      - paoche-malaysia
 
 proxy-providers:
   airport:
