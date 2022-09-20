@@ -1,0 +1,41 @@
+proxies:
+    -
+      name: '土耳其'
+      type: ss
+      server: test.com
+      port: 443
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '泰国'
+      type: ss
+      server: test.com
+      port: 23930
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '阿根廷'
+      type: ss
+      server: test.com
+      port: 23930
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '菲律宾'
+      type: ss
+      server: test.com
+      port: 23930
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '马来西亚'
+      type: ss
+      server: test.com
+      port: 23930
+      cipher: rc4-md5
+      password: psw
+      udp: true
