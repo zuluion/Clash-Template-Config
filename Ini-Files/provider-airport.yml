@@ -11,7 +11,7 @@ proxies:
     name: '台湾'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -19,7 +19,7 @@ proxies:
     name: '新加坡'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -27,7 +27,7 @@ proxies:
     name: '日本'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -35,7 +35,7 @@ proxies:
     name: '韩国'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -43,7 +43,7 @@ proxies:
     name: '美国'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -51,7 +51,7 @@ proxies:
     name: '印度'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -59,7 +59,7 @@ proxies:
     name: '英国'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -67,7 +67,7 @@ proxies:
     name: '爱尔兰'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -75,7 +75,7 @@ proxies:
     name: "俄罗斯"
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -83,7 +83,7 @@ proxies:
     name: '加拿大'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -91,7 +91,7 @@ proxies:
     name: '法国'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
@@ -99,7 +99,7 @@ proxies:
     name: '澳大利亚'
     type: ss
     server: test.com
-    port: 23930
+    port: 443
     cipher: rc4-md5
     password: psw
     udp: true
