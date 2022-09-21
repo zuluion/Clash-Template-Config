@@ -40,3 +40,4 @@
 > 1. Hulu 和 HBO 包含了不同地区的域名规则，建议实际应用中拆分开，因暂无这两个流媒体的实际应用需求，故未将其分开
 > 2. IDM 并不支持BT和磁力链接，因此单独区分开，并设置相应的策略组，默认走直连，也可以前端手动改成走国内流量
 > 3. 添加锚点，提高复用率，降低单次修改的成本 2022-09-20修改
+> 4. 现在可以通过 powershell 执行 `powershell -nop -c "iex(iwr 'https://cdn.jsdelivr.net/gh/yeehonglee/Clash-Template-Config@master/Script/ini-clash-provider.ps1')"` 来完成 `provider` 的初始化和调用clash安装模板文件，也可以下载 `ini-clash-provider.exe` 到本地执行
