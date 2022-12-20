@@ -53,12 +53,12 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
     proxies-use-special-streaming-media: &proxies-use-special-streaming-media
-      - 🇭🇰 airport-hk
-      - 🇨🇳 airport-tw
-      - 🇸🇬 airport-sg
-      - 🇯🇵 airport-jp
-      - 🇰🇷 airport-korea
-      - 🇺🇸 airport-us
+      - airport-hk
+      - airport-tw
+      - airport-sg
+      - airport-jp
+      - airport-korea
+      - airport-us
   
   proxy-providers-config:
     proxy-providers-common:
