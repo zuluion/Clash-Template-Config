@@ -471,6 +471,7 @@ rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
   - RULE-SET,IDM,🔽IDM
   - RULE-SET,DownLoadClient,DIRECT
