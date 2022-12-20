@@ -6,59 +6,59 @@ BASE-DATA:
     proxies-all: &proxies-all
       - 🔰国外流量
       - 🚀直接连接
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇺🇸 AIRPORT-US
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
       - AIRPORT
     proxies-all-fdirect: &proxies-all-fdirect
       - 🚀直接连接
       - 🔰国外流量
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇺🇸 AIRPORT-US
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
       - AIRPORT
     proxies-all-oforeign: &proxies-all-oforeign
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-US
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇺🇸 AIRPORT-US
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
       - AIRPORT
     proxies-use-special-streaming-media: &proxies-use-special-streaming-media
-      - airport-hk
-      - airport-tw
-      - airport-sg
-      - airport-jp
-      - airport-korea
-      - airport-us
+      - 🇭🇰 airport-hk
+      - 🇨🇳 airport-tw
+      - 🇸🇬 airport-sg
+      - 🇯🇵 airport-jp
+      - 🇰🇷 airport-korea
+      - 🇺🇸 airport-us
   
   proxy-providers-config:
     proxy-providers-common:
@@ -233,21 +233,21 @@ proxy-groups:
     name: 🎬TikTok
     type: select
     proxies:
-      - AIRPORT-US
+      - 🇺🇸 AIRPORT-US
       - 🔰国外流量
       - AIRPORT
-      - AIRPORT-HK
-      - AIRPORT-TW
-      - AIRPORT-SG
-      - AIRPORT-JP
-      - AIRPORT-Korea
-      - AIRPORT-India
-      - AIRPORT-EN
-      - AIRPORT-Ireland
-      - AIRPORT-RU
-      - AIRPORT-Canada
-      - AIRPORT-FR
-      - AIRPORT-AU
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
   -
     name: 🎬Netflix
     type: select
@@ -338,67 +338,67 @@ proxy-groups:
     use:
       - airport
   -
-    name: AIRPORT-HK
+    name: 🇭🇰 AIRPORT-HK
     type: select
     use:
       - airport-hk
   -
-    name: AIRPORT-TW
+    name: 🇨🇳 AIRPORT-TW
     type: select
     use:
       - airport-tw
   -
-    name: AIRPORT-SG
+    name: 🇸🇬 AIRPORT-SG
     type: select
     use:
       - airport-sg
   -
-    name: AIRPORT-JP
+    name: 🇯🇵 AIRPORT-JP
     type: select
     use:
       - airport-jp
   -
-    name: AIRPORT-Korea
+    name: 🇰🇷 AIRPORT-Korea
     type: select
     use:
       - airport-korea
   -
-    name: AIRPORT-US
+    name: 🇺🇸 AIRPORT-US
     type: select
     use:
       - airport-us  
   -
-    name: AIRPORT-India
+    name: 🇮🇳 AIRPORT-India
     type: select
     use:
       - airport-india 
   -
-    name: AIRPORT-EN
+    name: 🇬🇧 AIRPORT-EN
     type: select
     use:
       - airport-en 
   -
-    name: AIRPORT-Ireland
+    name: 🇮🇪 AIRPORT-Ireland
     type: select
     use:
       - airport-ireland 
   -
-    name: AIRPORT-RU
+    name: 🇷🇺 AIRPORT-RU
     type: select
     use:
       - airport-ru
   -
-    name: AIRPORT-Canada
+    name: 🇨🇦 AIRPORT-Canada
     type: select
     use:
       - airport-canada
   -
-    name: AIRPORT-FR
+    name: 🇫🇷 AIRPORT-FR
     type: select
     use:
       - airport-fr
   -
-    name: AIRPORT-AU
+    name: 🇦🇺 AIRPORT-AU
     type: select
     use:
       - airport-au
