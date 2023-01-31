@@ -415,57 +415,187 @@ proxy-providers:
       # lazy: true
       url: *health-check-url
   airport-hk:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-HK
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-HK
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-tw:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-TW
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
-    filter: *proxy-filter-TW 
+    filter: *proxy-filter-TW
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url 
   airport-sg:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-SG
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
-    filter: *proxy-filter-SG 
+    filter: *proxy-filter-SG
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url 
   airport-jp:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-JP
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
-    filter: *proxy-filter-JP 
+    filter: *proxy-filter-JP
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url 
   airport-fr:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-FR
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-FR
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-au:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-AU
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-AU
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-ireland:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-Ireland
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-Ireland
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-en:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-EN
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-EN
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-korea:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-Korea
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-Korea
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-ru:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-RU
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-RU
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-us:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-US
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-US
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-canada:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-Canada
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-Canada
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
   airport-india:
-    type: file
+    # type: file
+    # path: *proxy-file-path-AirPort
+    # filter: *proxy-filter-India
+    type: http
+    url: *url-airport 
+    interval: *airport-interval
     path: *proxy-file-path-AirPort
     filter: *proxy-filter-India
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
 
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
