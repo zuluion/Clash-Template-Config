@@ -7,7 +7,7 @@ IfExist, %clash_dir%
     FileCreateDir, %clash_dir%\myprovider\ruleset
     ; 从Github拉下来初始化的Provider文件
     UrlDownloadToFile, https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Ini-Files/provider-airport.yml, %clash_dir%\myprovider\proxies\provider-airport.yml
-    ; UrlDownloadToFile, https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Ini-Files/provider-paoche.yml, %clash_dir%\myprovider\proxies\provider-add-on.yml
+    ; UrlDownloadToFile, https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Ini-Files/provider-add-on.yml, %clash_dir%\myprovider\proxies\provider-add-on.yml
     ; 调用clash for windows，从当前项目下载配置文件模板
     Run, clash://install-config?url=https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Clash-Template-Config.yml
     MsgBox, 初始化完成
