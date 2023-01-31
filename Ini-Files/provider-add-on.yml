@@ -39,3 +39,35 @@ proxies:
       cipher: rc4-md5
       password: psw
       udp: true
+    -
+      name: '巴西'
+      type: ss
+      server: test.com
+      port: 443
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '乌克兰'
+      type: ss
+      server: test.com
+      port: 443
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '越南'
+      type: ss
+      server: test.com
+      port: 443
+      cipher: rc4-md5
+      password: psw
+      udp: true
+    -
+      name: '南非'
+      type: ss
+      server: test.com
+      port: 443
+      cipher: rc4-md5
+      password: psw
+      udp: true
