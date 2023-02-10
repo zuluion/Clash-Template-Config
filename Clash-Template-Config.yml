@@ -225,6 +225,11 @@ proxy-groups:
     proxies:
       *proxies-all
   -
+    name: 🤖OpenAI
+    type: select
+    proxies:
+      *proxies-all
+  -
     name: 🎬Youtube
     type: select
     proxies:
@@ -603,6 +608,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
+  - DOMAIN-SUFFIX,openai.com,🤖OpenAI
   - RULE-SET,IDM,🔽IDM
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
