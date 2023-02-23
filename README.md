@@ -41,3 +41,4 @@
 > 2. IDM 并不支持BT和磁力链接，因此单独区分开，并设置相应的策略组，默认走直连，也可以前端手动改成走国内流量
 > 3. 添加锚点，提高复用率，降低单次修改的成本 2022-09-20修改
 > 4. 现在可以通过 powershell 执行 `powershell -nop -c "iex(iwr 'https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Script/ini-clash-provider.ps1')"` 来完成 `provider` 的初始化和调用clash安装模板文件，也可以下载 `ini-clash-provider.exe` 到本地执行
+> 5. Android 建议复制 [Clash Template Config](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Clash-Template-Config.yml) 的代码，并填写自己的机场订阅，以此创建自己的Gist使用，实际上其它客户端也可以类似操作，从而跳过初始化的过程，此前的初始化是用于CFW，并使用Diff来合并自己机场订阅用的
