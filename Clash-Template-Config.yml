@@ -2,7 +2,7 @@
 # 基础数据 设置锚点 复用 
 BASE-DATA:
   common:
-    health-check-url: &health-check-url http://www.gstatic.com/generate_204
+    health-check-url: &health-check-url https://www.gstatic.com/generate_204
     proxies-all: &proxies-all
       - 🔰国外流量
       - 🚀直接连接
