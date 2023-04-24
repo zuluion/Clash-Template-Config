@@ -52,15 +52,37 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
-    proxies-use-special-streaming-media: &proxies-use-special-streaming-media
-      - airport-hk
-      - airport-tw
-      - airport-sg
-      - airport-jp
-      - airport-korea
-      - airport-us
+    proxies-all-for-tiktok: &proxies-all-for-tiktok
+      - 🇺🇸 AIRPORT-US
+      - 🔰国外流量
+      - AIRPORT
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+    proxies-all-for-openai: &proxies-all-for-openai
+      - 🇰🇷 AIRPORT-Korea
+      - 🇯🇵 AIRPORT-JP
+      - 🇺🇸 AIRPORT-US
+      - 🇸🇬 AIRPORT-SG
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
   
   proxy-providers-config:
+    proxy-providers-use: &proxy-providers-use 
+      - airport
     proxy-providers-common:
       airport-interval: &airport-interval 36000
       url-airport: &url-airport "" # 这里填入机场链接
@@ -84,6 +106,7 @@ BASE-DATA:
       proxy-filter-AGT: &proxy-filter-AGT '阿根廷'
       proxy-filter-PLP: &proxy-filter-PLP '菲律宾'
       proxy-filter-Malaysia: &proxy-filter-Malaysia '马来西亚'
+      proxy-filter-special-streaming-media: &proxy-filter-special-streaming-media '港|台湾|新加坡|日本|韩国|美国'
   
   rule-providers-config:
     rule-providers-common:
@@ -122,6 +145,12 @@ BASE-DATA:
       Netflix:
         rule-file-path-Netflix: &rule-file-path-Netflix myprovider/ruleset/Netflix.yaml
         rule-provider-url-Netflix: &rule-provider-url-Netflix https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netflix.yaml
+      NewBing:
+        rule-file-path-NewBing: &rule-file-path-NewBing myprovider/ruleset/NewBing.yaml
+        rule-provider-url-NewBing: &rule-provider-url-NewBing https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/NewBing.yaml
+      OneDrive:
+        rule-file-path-OneDrive: &rule-file-path-OneDrive myprovider/ruleset/OneDrive.yaml
+        rule-provider-url-OneDrive: &rule-provider-url-OneDrive https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OneDrive.yaml
       Spotify:
         rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
         rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
@@ -228,7 +257,7 @@ proxy-groups:
     name: 🤖OpenAI
     type: select
     proxies:
-      *proxies-all
+      *proxies-all-for-openai
   -
     name: 🎬Youtube
     type: select
@@ -238,47 +267,33 @@ proxy-groups:
     name: 🎬TikTok
     type: select
     proxies:
-      - 🇺🇸 AIRPORT-US
-      - 🔰国外流量
-      - AIRPORT
-      - 🇭🇰 AIRPORT-HK
-      - 🇨🇳 AIRPORT-TW
-      - 🇸🇬 AIRPORT-SG
-      - 🇯🇵 AIRPORT-JP
-      - 🇰🇷 AIRPORT-Korea
-      - 🇮🇳 AIRPORT-India
-      - 🇬🇧 AIRPORT-EN
-      - 🇮🇪 AIRPORT-Ireland
-      - 🇷🇺 AIRPORT-RU
-      - 🇨🇦 AIRPORT-Canada
-      - 🇫🇷 AIRPORT-FR
-      - 🇦🇺 AIRPORT-AU
+      *proxies-all-for-tiktok
   -
     name: 🎬Netflix
     type: select
-    use:
-      *proxies-use-special-streaming-media
+    filter: *proxy-filter-special-streaming-media
+    use: *proxy-providers-use
     proxies:
       *proxies-all
   -
     name: 🎬DisneyPlus
     type: select
-    use:
-      *proxies-use-special-streaming-media
+    filter: *proxy-filter-special-streaming-media
+    use: *proxy-providers-use
     proxies:
       *proxies-all
   -
     name: 🎬Hulu
     type: select
-    use:
-      *proxies-use-special-streaming-media
+    filter: *proxy-filter-special-streaming-media
+    use: *proxy-providers-use
     proxies:
       *proxies-all
   -
     name: 🎬HBO
     type: select
-    use:
-      *proxies-use-special-streaming-media
+    filter: *proxy-filter-special-streaming-media
+    use: *proxy-providers-use
     proxies:
       *proxies-all
   -
@@ -300,12 +315,22 @@ proxy-groups:
     name: 🎮Steam
     type: select
     proxies:
-      *proxies-all-fdirect
+      *proxies-all
   -
     name: 💻Microsoft
     type: select
     proxies:
       *proxies-all-fdirect
+  -
+    name: ☁OneDrive
+    type: select
+    proxies:
+      *proxies-all-fdirect
+  -
+    name: 🤖NewBing
+    type: select
+    proxies:
+      *proxies-all
   -
     name: 🧧Paypal
     type: select
@@ -329,7 +354,7 @@ proxy-groups:
   -
     name: 🔽IDM
     type: select
-    proxies:
+    proxies: 
       - 🚀直接连接
       - 🔰国外流量
   -
@@ -340,73 +365,72 @@ proxy-groups:
   -
     name: AIRPORT
     type: select
-    use:
-      - airport
+    use: *proxy-providers-use
   -
     name: 🇭🇰 AIRPORT-HK
     type: select
-    use:
-      - airport-hk
+    filter: *proxy-filter-HK
+    use: *proxy-providers-use
   -
     name: 🇨🇳 AIRPORT-TW
     type: select
-    use:
-      - airport-tw
+    filter: *proxy-filter-TW
+    use: *proxy-providers-use
   -
     name: 🇸🇬 AIRPORT-SG
     type: select
-    use:
-      - airport-sg
+    filter: *proxy-filter-SG
+    use: *proxy-providers-use
   -
     name: 🇯🇵 AIRPORT-JP
     type: select
-    use:
-      - airport-jp
+    filter: *proxy-filter-JP
+    use: *proxy-providers-use
   -
     name: 🇰🇷 AIRPORT-Korea
     type: select
-    use:
-      - airport-korea
+    filter: *proxy-filter-Korea
+    use: *proxy-providers-use
   -
     name: 🇺🇸 AIRPORT-US
     type: select
-    use:
-      - airport-us  
+    filter: *proxy-filter-US
+    use: *proxy-providers-use
   -
     name: 🇮🇳 AIRPORT-India
     type: select
-    use:
-      - airport-india 
+    filter: *proxy-filter-India
+    use: *proxy-providers-use
   -
     name: 🇬🇧 AIRPORT-EN
     type: select
-    use:
-      - airport-en 
+    filter: *proxy-filter-EN
+    use: *proxy-providers-use
   -
     name: 🇮🇪 AIRPORT-Ireland
     type: select
-    use:
-      - airport-ireland 
+    filter: *proxy-filter-Ireland
+    use: *proxy-providers-use
   -
     name: 🇷🇺 AIRPORT-RU
     type: select
-    use:
-      - airport-ru
+    filter: *proxy-filter-RU
+    use: *proxy-providers-use
   -
     name: 🇨🇦 AIRPORT-Canada
     type: select
-    use:
-      - airport-canada
+    filter: *proxy-filter-Canada
+    use: *proxy-providers-use
   -
     name: 🇫🇷 AIRPORT-FR
     type: select
-    use:
-      - airport-fr
+    filter: *proxy-filter-FR
+    use: *proxy-providers-use
   -
     name: 🇦🇺 AIRPORT-AU
     type: select
-    use:
-      - airport-au
+    filter: *proxy-filter-AU
+    use: *proxy-providers-use
 
 proxy-providers:
   airport:
@@ -414,188 +438,6 @@ proxy-providers:
     url: *url-airport 
     interval: *airport-interval
     path: *proxy-file-path-AirPort
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-hk:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-HK
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-HK
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-tw:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-TW
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-TW
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url 
-  airport-sg:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-SG
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-SG
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url 
-  airport-jp:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-JP
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-JP
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url 
-  airport-fr:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-FR
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-FR
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-au:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-AU
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-AU
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-ireland:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-Ireland
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-Ireland
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-en:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-EN
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-EN
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-korea:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-Korea
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-Korea
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-ru:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-RU
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-RU
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-us:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-US
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-US
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-canada:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-Canada
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-Canada
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
-  airport-india:
-    # type: file
-    # path: *proxy-file-path-AirPort
-    # filter: *proxy-filter-India
-    type: http
-    url: *url-airport 
-    interval: *airport-interval
-    path: *proxy-file-path-AirPort
-    filter: *proxy-filter-India
     health-check:
       enable: true
       interval: *airport-interval
@@ -619,6 +461,8 @@ rules:
   - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,GitHub,🔰国外流量
   - RULE-SET,Google,🔰国外流量
+  - RULE-SET,NewBing,🤖NewBing
+  - RULE-SET,OneDrive,☁OneDrive
   - RULE-SET,Microsoft,💻Microsoft
   - RULE-SET,Netflix,🎬Netflix 
   - RULE-SET,DisneyPlus,🎬DisneyPlus 
@@ -702,6 +546,18 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-Microsoft
     url: *rule-provider-url-Microsoft
+    interval: *rule-interval
+  OneDrive: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-OneDrive
+    url: *rule-provider-url-OneDrive
+    interval: *rule-interval
+  NewBing: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-NewBing
+    url: *rule-provider-url-NewBing
     interval: *rule-interval
   Netflix: 
     type: http
