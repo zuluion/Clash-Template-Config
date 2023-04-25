@@ -3,6 +3,10 @@
 
 [Clash Template Config](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Clash-Template-Config.yml)
 
+> 因为CFA已经很久没有更新，最新的配置文件模板基于使用了新的proxy-group filter 特性，因此无法在CFA中使用，建议使用 0.0.11 版本，为此特地创建新的用于 CFA 的临时配置文件
+
+[Clash Template Config Temp For CFA](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Clash-Template-Config_temp-for-cfa.yml)
+
 # App Filter
 > 应用分流规则
 
