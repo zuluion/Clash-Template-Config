@@ -151,6 +151,9 @@ BASE-DATA:
       OneDrive:
         rule-file-path-OneDrive: &rule-file-path-OneDrive myprovider/ruleset/OneDrive.yaml
         rule-provider-url-OneDrive: &rule-provider-url-OneDrive https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OneDrive.yaml
+      OpenAI:
+        rule-file-path-OpenAI: &rule-file-path-OpenAI myprovider/ruleset/OpenAI.yaml
+        rule-provider-url-OpenAI: &rule-provider-url-OpenAI https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OpenAI.yaml
       Spotify:
         rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
         rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
@@ -450,7 +453,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
-  - DOMAIN-SUFFIX,openai.com,🤖OpenAI
+  - RULE-SET,OpenAI,🤖OpenAI
   - RULE-SET,IDM,🔽IDM
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
@@ -552,6 +555,12 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-OneDrive
     url: *rule-provider-url-OneDrive
+    interval: *rule-interval
+  OpenAI: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-OpenAI
+    url: *rule-provider-url-OpenAI
     interval: *rule-interval
   NewBing: 
     type: http
