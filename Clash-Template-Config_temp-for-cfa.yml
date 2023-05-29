@@ -52,6 +52,33 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+    proxies-all-for-tiktok: &proxies-all-for-tiktok
+      - 🇺🇸 AIRPORT-US
+      - 🔰国外流量
+      - AIRPORT
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+    proxies-all-for-openai: &proxies-all-for-openai
+      - 🇰🇷 AIRPORT-Korea
+      - 🇯🇵 AIRPORT-JP
+      - 🇺🇸 AIRPORT-US
+      - 🇸🇬 AIRPORT-SG
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
     proxies-use-special-streaming-media: &proxies-use-special-streaming-media
       - airport-hk
       - airport-tw
@@ -122,6 +149,15 @@ BASE-DATA:
       Netflix:
         rule-file-path-Netflix: &rule-file-path-Netflix myprovider/ruleset/Netflix.yaml
         rule-provider-url-Netflix: &rule-provider-url-Netflix https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netflix.yaml
+      NewBing:
+        rule-file-path-NewBing: &rule-file-path-NewBing myprovider/ruleset/NewBing.yaml
+        rule-provider-url-NewBing: &rule-provider-url-NewBing https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/NewBing.yaml
+      OneDrive:
+        rule-file-path-OneDrive: &rule-file-path-OneDrive myprovider/ruleset/OneDrive.yaml
+        rule-provider-url-OneDrive: &rule-provider-url-OneDrive https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OneDrive.yaml
+      OpenAI:
+        rule-file-path-OpenAI: &rule-file-path-OpenAI myprovider/ruleset/OpenAI.yaml
+        rule-provider-url-OpenAI: &rule-provider-url-OpenAI https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OpenAI.yaml
       Spotify:
         rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
         rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
@@ -228,7 +264,7 @@ proxy-groups:
     name: 🤖OpenAI
     type: select
     proxies:
-      *proxies-all
+      *proxies-all-for-openai
   -
     name: 🎬Youtube
     type: select
@@ -238,21 +274,7 @@ proxy-groups:
     name: 🎬TikTok
     type: select
     proxies:
-      - 🇺🇸 AIRPORT-US
-      - 🔰国外流量
-      - AIRPORT
-      - 🇭🇰 AIRPORT-HK
-      - 🇨🇳 AIRPORT-TW
-      - 🇸🇬 AIRPORT-SG
-      - 🇯🇵 AIRPORT-JP
-      - 🇰🇷 AIRPORT-Korea
-      - 🇮🇳 AIRPORT-India
-      - 🇬🇧 AIRPORT-EN
-      - 🇮🇪 AIRPORT-Ireland
-      - 🇷🇺 AIRPORT-RU
-      - 🇨🇦 AIRPORT-Canada
-      - 🇫🇷 AIRPORT-FR
-      - 🇦🇺 AIRPORT-AU
+      *proxies-all-for-tiktok
   -
     name: 🎬Netflix
     type: select
@@ -300,12 +322,22 @@ proxy-groups:
     name: 🎮Steam
     type: select
     proxies:
-      *proxies-all-fdirect
+      *proxies-all
   -
     name: 💻Microsoft
     type: select
     proxies:
       *proxies-all-fdirect
+  -
+    name: ☁OneDrive
+    type: select
+    proxies:
+      *proxies-all-fdirect
+  -
+    name: 🤖NewBing
+    type: select
+    proxies:
+      *proxies-all
   -
     name: 🧧Paypal
     type: select
@@ -608,7 +640,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
-  - DOMAIN-SUFFIX,openai.com,🤖OpenAI
+  - RULE-SET,OpenAI,🤖OpenAI
   - RULE-SET,IDM,🔽IDM
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
@@ -619,6 +651,8 @@ rules:
   - RULE-SET,BiliBili,🎬哔哩哔哩
   - RULE-SET,GitHub,🔰国外流量
   - RULE-SET,Google,🔰国外流量
+  - RULE-SET,NewBing,🤖NewBing
+  - RULE-SET,OneDrive,☁OneDrive
   - RULE-SET,Microsoft,💻Microsoft
   - RULE-SET,Netflix,🎬Netflix 
   - RULE-SET,DisneyPlus,🎬DisneyPlus 
@@ -702,6 +736,24 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-Microsoft
     url: *rule-provider-url-Microsoft
+    interval: *rule-interval
+  OneDrive: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-OneDrive
+    url: *rule-provider-url-OneDrive
+    interval: *rule-interval
+  OpenAI: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-OpenAI
+    url: *rule-provider-url-OpenAI
+    interval: *rule-interval
+  NewBing: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-NewBing
+    url: *rule-provider-url-NewBing
     interval: *rule-interval
   Netflix: 
     type: http
