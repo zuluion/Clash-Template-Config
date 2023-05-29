@@ -146,8 +146,8 @@ BASE-DATA:
         rule-file-path-Netflix: &rule-file-path-Netflix myprovider/ruleset/Netflix.yaml
         rule-provider-url-Netflix: &rule-provider-url-Netflix https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netflix.yaml
       Netch:
-        rule-file-path-Netflix: &rule-file-path-Netflix myprovider/ruleset/Netch.yaml
-        rule-provider-url-Netflix: &rule-provider-url-Netflix https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netch.yaml
+        rule-file-path-Netflix: &rule-file-path-Netch myprovider/ruleset/Netch.yaml
+        rule-provider-url-Netflix: &rule-provider-url-Netch https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netch.yaml
       NewBing:
         rule-file-path-NewBing: &rule-file-path-NewBing myprovider/ruleset/NewBing.yaml
         rule-provider-url-NewBing: &rule-provider-url-NewBing https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/NewBing.yaml
