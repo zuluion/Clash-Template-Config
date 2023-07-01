@@ -4,3 +4,7 @@ payload:
   - DOMAIN,outlook.office365.com
   - DOMAIN,smtp-mail.outlook.com
   - DOMAIN,smtp.office365.com
+  - DOMAIN-SUFFIX,outlook.com
+  - DOMAIN-SUFFIX,outlookgroups.ms
+  - DOMAIN-SUFFIX,outlookmobile.com
+  - DOMAIN-SUFFIX,outlook.live.com
