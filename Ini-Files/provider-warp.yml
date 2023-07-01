@@ -1,0 +1,11 @@
+proxies:
+  - 
+    name: WARP+
+    type: wireguard
+    server: <change to your preferred IP>
+    port: <change to your port>
+    ip: <change to your WARP intranet IP>c
+    public-key: <change to your public key>
+    private-key: <change to your private key>
+    mtu: <change to your mtu>
+    udp: true
