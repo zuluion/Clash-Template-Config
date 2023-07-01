@@ -154,6 +154,9 @@ BASE-DATA:
       OneDrive:
         rule-file-path-OneDrive: &rule-file-path-OneDrive myprovider/ruleset/OneDrive.yaml
         rule-provider-url-OneDrive: &rule-provider-url-OneDrive https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OneDrive.yaml
+      OutLook:
+        rule-file-path-OutLook: &rule-file-path-OutLook myprovider/ruleset/OutLook.yaml
+        rule-provider-url-OutLook: &rule-provider-url-OutLook https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OutLook.yaml
       OpenAI:
         rule-file-path-OpenAI: &rule-file-path-OpenAI myprovider/ruleset/OpenAI.yaml
         rule-provider-url-OpenAI: &rule-provider-url-OpenAI https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OpenAI.yaml
@@ -338,6 +341,11 @@ proxy-groups:
     proxies:
       *proxies-all-fdirect
   -
+    name: 📧OutLook
+    type: select
+    proxies:
+      *proxies-all
+  -
     name: 🤖NewBing
     type: select
     proxies:
@@ -474,6 +482,7 @@ rules:
   - RULE-SET,Google,🔰国外流量
   - RULE-SET,NewBing,🤖NewBing
   - RULE-SET,OneDrive,☁OneDrive
+  - RULE-SET,OutLook,📧OutLook
   - RULE-SET,Microsoft,💻Microsoft
   - RULE-SET,Netflix,🎬Netflix 
   - RULE-SET,DisneyPlus,🎬DisneyPlus 
@@ -564,6 +573,12 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-OneDrive
     url: *rule-provider-url-OneDrive
+    interval: *rule-interval
+  OutLook: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-OutLook
+    url: *rule-provider-url-OutLook
     interval: *rule-interval
   OpenAI: 
     type: http
