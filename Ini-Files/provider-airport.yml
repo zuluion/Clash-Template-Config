@@ -1,1 +1,105 @@
-
+proxies:
+  -
+    name: '香港'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '台湾'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '新加坡'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '日本'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '韩国'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '美国'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '印度'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '英国'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '爱尔兰'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: "俄罗斯"
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '加拿大'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '法国'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
+  -
+    name: '澳大利亚'
+    type: ss
+    server: test.com
+    port: 443
+    cipher: rc4-md5
+    password: psw
+    udp: true
