@@ -20,6 +20,7 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+      - WARP+
     proxies-all-fdirect: &proxies-all-fdirect
       - 🚀直接连接
       - 🔰国外流量
@@ -37,6 +38,7 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+      - WARP+
     proxies-all-oforeign: &proxies-all-oforeign
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
@@ -52,6 +54,7 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+      - WARP+
     proxies-all-for-tiktok: &proxies-all-for-tiktok
       - 🇺🇸 AIRPORT-US
       - 🔰国外流量
@@ -83,11 +86,15 @@ BASE-DATA:
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use 
       - airport
+      - warp
     proxy-providers-common:
       airport-interval: &airport-interval 36000
       url-airport: &url-airport "" # 这里填入机场链接
       proxy-file-path-AirPort: &proxy-file-path-AirPort myprovider/proxies/provider-airport.yml
+      url-warp: &url-warp "" # 这里填入直接托管的WARP配置
+      proxy-file-path-warp: &proxy-file-path-warp myprovider/proxies/provider-warp.yml
     proxy-providers-filter:
+      proxy-filter-WARP: &proxy-filter-WARP 'WARP+'
       proxy-filter-HK: &proxy-filter-HK '港|HK|HongKong'
       proxy-filter-TW: &proxy-filter-TW '台湾|TW|Taiwan'
       proxy-filter-SG: &proxy-filter-SG '新加坡|SG|Singapore'
@@ -450,6 +457,11 @@ proxy-groups:
     type: select
     filter: *proxy-filter-AU
     use: *proxy-providers-use
+  -
+    name: WARP+
+    type: select
+    filter: *proxy-filter-WARP
+    use: *proxy-providers-use
 
 proxy-providers:
   airport:
@@ -457,6 +469,16 @@ proxy-providers:
     url: *url-airport 
     interval: *airport-interval
     path: *proxy-file-path-AirPort
+    health-check:
+      enable: true
+      interval: *airport-interval
+      # lazy: true
+      url: *health-check-url
+  warp:
+    type: http
+    url: *url-warp 
+    interval: *airport-interval
+    path: *proxy-file-path-warp
     health-check:
       enable: true
       interval: *airport-interval
