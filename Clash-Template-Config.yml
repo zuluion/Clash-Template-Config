@@ -21,6 +21,7 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
       - WARP+
+      - ProxyChain
     proxies-all-fdirect: &proxies-all-fdirect
       - 🚀直接连接
       - 🔰国外流量
@@ -39,7 +40,25 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
       - WARP+
+      - ProxyChain
     proxies-all-oforeign: &proxies-all-oforeign
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇺🇸 AIRPORT-US
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
+      - WARP+
+      - ProxyChain
+    proxies-all-for-proxychain: &proxies-all-for-proxychain
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
       - 🇸🇬 AIRPORT-SG
@@ -462,6 +481,23 @@ proxy-groups:
     type: select
     filter: *proxy-filter-WARP
     use: *proxy-providers-use
+  -
+    name: ProxyChain_Start
+    type: select
+    proxies:
+      *proxies-all-for-proxychain
+  -
+    name: ProxyChain_Landing
+    type: select
+    proxies:
+      *proxies-all-for-proxychain
+  - 
+    name: ProxyChain
+    type: relay
+    # disable-udp: true
+    proxies:
+      - ProxyChain_Start
+      - ProxyChain_Landing
 
 proxy-providers:
   airport:
