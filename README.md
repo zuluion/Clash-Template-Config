@@ -52,6 +52,6 @@
 > 4. 现在可以通过 powershell 执行 `powershell -nop -c "iex(iwr 'https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Script/ini-clash-provider.ps1')"` 来完成 `provider` 的初始化和调用clash安装模板文件，也可以下载 `ini-clash-provider.exe` 到本地执行
 > 5. Android 建议复制 [Clash Template Config](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Clash-Template-Config.yml) 的代码，并填写自己的机场订阅，以此创建自己的Gist使用，实际上其它客户端也可以类似操作，从而跳过初始化的过程，此前的初始化是用于CFW，并使用Diff来合并自己机场订阅用的
 > 6. 新增了WARP配置，默认禁用，需要自写WARP节点配置，模板在https://github.com/zuluion/Clash-Template-Config/blob/master/Ini-Files/provider-warp.yml
-> 7. 新增加了proxychain配置，可以用未被墙的节点，拯救被墙的节点
+> 7. 新增加了proxychain(relay)配置，可以用未被墙的节点，拯救被墙的节点
 > 8. 新增了DNS配置，降低DNS污染几率
 > 9. 新增了localproxy配置，用于配置局域网的socks代理，勉强实现不同网络环境下的自动切换，默认禁用
