@@ -430,25 +430,37 @@ proxy-groups:
   #   name: Local-Proxy
   #   type: fallback
   #   url: *health-check-url
-  #   interval: 300
+  #   interval: 30
   #   filter: ''
   #   use:
   #     - local
   # -
-  #   name: 🔰国外流量
+  #   name: 🔰国外流量-AUTO
   #   type: url-test
   #   url: *health-check-url
-  #   interval: 300
+  #   interval: 30
   #   proxies:
   #     - Local-Proxy
   #     - 🔰国外流量-BASE
   # -
-  #   name: ⚓️其他流量
+  #   name: ⚓️其他流量-AUTO
   #   type: url-test
   #   url: *health-check-url
-  #   interval: 300
+  #   interval: 30
   #   proxies:
   #     - Local-Proxy
+  #     - ⚓️其他流量-BASE
+  # -
+  #   name: 🔰国外流量
+  #   type: select
+  #   proxies:
+  #     - 🔰国外流量-AUTO
+  #     - 🔰国外流量-BASE
+  # -
+  #   name: ⚓️其他流量
+  #   type: select
+  #   proxies:
+  #     - ⚓️其他流量-AUTO
   #     - ⚓️其他流量-BASE
   # -
   #   name: 🔰国外流量-BASE
