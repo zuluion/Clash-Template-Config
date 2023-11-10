@@ -198,6 +198,9 @@ BASE-DATA:
       Steam:
         rule-file-path-Steam: &rule-file-path-Steam myprovider/ruleset/Steam.yaml
         rule-provider-url-Steam: &rule-provider-url-Steam https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Steam.yaml
+      Ubisoft:
+        rule-file-path-Ubisoft: &rule-file-path-Ubisoft myprovider/ruleset/Ubisoft.yaml
+        rule-provider-url-Ubisoft: &rule-provider-url-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Ubisoft.yaml
       Telegram:
         rule-file-path-Telegram: &rule-file-path-Telegram myprovider/ruleset/Telegram.yaml
         rule-provider-url-Telegram: &rule-provider-url-Telegram https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Telegram.yaml
@@ -563,6 +566,11 @@ proxy-groups:
     proxies:
       *proxies-all
   -
+    name: 🎮Ubisoft
+    type: select
+    proxies:
+      *proxies-all
+  -
     name: 🎮Netch
     type: select
     proxies:
@@ -770,6 +778,7 @@ rules:
   - RULE-SET,TikTok,🎬TikTok
   - RULE-SET,Speedtest,📡Speedtest
   - RULE-SET,Steam,🎮Steam
+  - RULE-SET,Ubisoft,🎮Ubisoft
   - RULE-SET,Netch,🎮Netch
   - RULE-SET,Spotify,🎧Spotify
   - RULE-SET,Telegram,✈️Telegram 
@@ -900,6 +909,12 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-Steam
     url: *rule-provider-url-Steam
+    interval: *rule-interval
+  Ubisoft: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-Ubisoft
+    url: *rule-provider-url-Ubisoft
     interval: *rule-interval
   Telegram: 
     type: http
