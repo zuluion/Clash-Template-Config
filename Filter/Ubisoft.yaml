@@ -6,3 +6,6 @@
 # TOTAL: 1
 payload:
   - DOMAIN,uplaypc-s-ubisoft.cdn.ubi.com
+  - DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com
+  - DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn
+  
