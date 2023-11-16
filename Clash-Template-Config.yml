@@ -136,6 +136,10 @@ BASE-DATA:
       proxy-filter-PLP: &proxy-filter-PLP '菲律宾|PH|Philippines'
       proxy-filter-Malaysia: &proxy-filter-Malaysia '马来西亚|MY|Malaysia'
       proxy-filter-special-streaming-media: &proxy-filter-special-streaming-media '港|HK|HongKong|台湾|TW|Taiwan|新加坡|SG|Singapore|日本|JP|Japan|韩国|KR|Korean|美国|US|United States|America'
+      proxy-filter-BR: &proxy-filter-BR '巴西|BR|Brazil'
+      proxy-filter-UA: &proxy-filter-UA '乌克兰|UA|Ukraine'
+      proxy-filter-VN: &proxy-filter-VN '越南|VN|Viet Nam'
+      proxy-filter-ZA: &proxy-filter-ZA '南非|ZA|South Africa'
   
   rule-providers-config:
     rule-providers-common:
@@ -618,7 +622,7 @@ proxy-groups:
   -
     name: 🔽IDM
     type: select
-    proxies: 
+    proxies:
       - 🚀直接连接
       - 🔰国外流量
   -
