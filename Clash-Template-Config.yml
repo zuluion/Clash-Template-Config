@@ -250,6 +250,9 @@ BASE-DATA:
       IDM:
         rule-file-path-IDM: &rule-file-path-IDM myprovider/ruleset/IDM.yaml
         rule-provider-url-IDM: &rule-provider-url-IDM https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/IDM.yaml
+      PikPak:
+        rule-file-path-PikPak: &rule-file-path-PikPak myprovider/ruleset/PikPak.yaml
+        rule-provider-url-PikPak: &rule-provider-url-PikPak https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PikPak.yaml
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -600,6 +603,11 @@ proxy-groups:
     proxies:
       *proxies-all
   -
+    name: 💽PikPak
+    type: select
+    proxies:
+      *proxies-all
+  -
     name: 🧧Paypal
     type: select
     proxies:
@@ -785,6 +793,7 @@ rules:
   - RULE-SET,Ubisoft,🎮Ubisoft
   - RULE-SET,Netch,🎮Netch
   - RULE-SET,Spotify,🎧Spotify
+  - RULE-SET,PikPak,💽PikPak
   - RULE-SET,Telegram,✈️Telegram 
   - RULE-SET,Twitter,🔰国外流量 
   - RULE-SET,Tencent,🚀直接连接
@@ -1009,4 +1018,10 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-IDM
     url: *rule-provider-url-IDM
+    interval: *rule-interval
+  PikPak: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-PikPak
+    url: *rule-provider-url-PikPak
     interval: *rule-interval
