@@ -641,7 +641,6 @@ rules:
   - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
   - RULE-SET,OpenAI,🤖OpenAI
-  - RULE-SET,IDM,🔽IDM
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
@@ -671,6 +670,7 @@ rules:
   - RULE-SET,Facebook,📘Facebook 
   - RULE-SET,Proxy,🔰国外流量
   - RULE-SET,Direct,DIRECT
+  - RULE-SET,IDM,🔽IDM
   - DOMAIN-SUFFIX,live.cn,🚀直接连接
 
   - GEOIP,CN,DIRECT
