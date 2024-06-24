@@ -90,6 +90,17 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+    proxies-all-for-gemini: &proxies-all-for-gemini
+      - 🇺🇸 AIRPORT-US
+      - 🇬🇧 AIRPORT-EN
+      - 🇰🇷 AIRPORT-Korea
+      - 🇯🇵 AIRPORT-JP
+      - 🇸🇬 AIRPORT-SG
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
     proxies-use-special-streaming-media: &proxies-use-special-streaming-media
       - airport-hk
       - airport-tw
@@ -172,6 +183,9 @@ BASE-DATA:
       Claude:
         rule-file-path-Claude: &rule-file-path-Claude myprovider/ruleset/Claude.yaml
         rule-provider-url-Claude: &rule-provider-url-Claude https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Claude.yaml
+      Gemini:
+        rule-file-path-Gemini: &rule-file-path-Gemini myprovider/ruleset/Gemini.yaml
+        rule-provider-url-Gemini: &rule-provider-url-Gemini https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Gemini.yaml
       Spotify:
         rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
         rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
@@ -284,6 +298,11 @@ proxy-groups:
     type: select
     proxies:
       *proxies-all-for-claude
+  -
+    name: 🤖Gemini
+    type: select
+    proxies:
+      *proxies-all-for-gemini
   -
     name: 🎬Youtube
     type: select
@@ -661,6 +680,7 @@ rules:
   - DOMAIN,yacd.haishan.me,🔰国外流量
   - RULE-SET,OpenAI,🤖OpenAI
   - RULE-SET,Claude,🤖Claude
+  - RULE-SET,Gemini,🤖Gemini
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
@@ -774,6 +794,12 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-Claude
     url: *rule-provider-url-Claude
+    interval: *rule-interval
+  Gemini: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-Gemini
+    url: *rule-provider-url-Gemini
     interval: *rule-interval
   NewBing: 
     type: http
