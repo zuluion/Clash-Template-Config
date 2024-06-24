@@ -79,6 +79,17 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+    proxies-all-for-claude: &proxies-all-for-claude
+      - 🇬🇧 AIRPORT-EN
+      - 🇺🇸 AIRPORT-US
+      - 🇰🇷 AIRPORT-Korea
+      - 🇯🇵 AIRPORT-JP
+      - 🇸🇬 AIRPORT-SG
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
     proxies-use-special-streaming-media: &proxies-use-special-streaming-media
       - airport-hk
       - airport-tw
@@ -158,6 +169,9 @@ BASE-DATA:
       OpenAI:
         rule-file-path-OpenAI: &rule-file-path-OpenAI myprovider/ruleset/OpenAI.yaml
         rule-provider-url-OpenAI: &rule-provider-url-OpenAI https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OpenAI.yaml
+      Claude:
+        rule-file-path-Claude: &rule-file-path-Claude myprovider/ruleset/Claude.yaml
+        rule-provider-url-Claude: &rule-provider-url-Claude https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Claude.yaml
       Spotify:
         rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
         rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
@@ -265,6 +279,11 @@ proxy-groups:
     type: select
     proxies:
       *proxies-all-for-openai
+  -
+    name: 🤖Claude
+    type: select
+    proxies:
+      *proxies-all-for-claude
   -
     name: 🎬Youtube
     type: select
@@ -641,6 +660,7 @@ rules:
   - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
   - DOMAIN,yacd.haishan.me,🔰国外流量
   - RULE-SET,OpenAI,🤖OpenAI
+  - RULE-SET,Claude,🤖Claude
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
@@ -748,6 +768,12 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-OpenAI
     url: *rule-provider-url-OpenAI
+    interval: *rule-interval
+  Claude: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-Claude
+    url: *rule-provider-url-Claude
     interval: *rule-interval
   NewBing: 
     type: http
