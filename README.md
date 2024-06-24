@@ -16,6 +16,7 @@
 + [Apple](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Apple.yaml)
 + [BiliBili](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Bilibili.yaml)
 + [China](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/China.yaml)
++ [Claude](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Claude.yaml)
 + [DownLoadClient](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/DownLoadClient.yaml)
 + [Direct](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Direct.yaml)
 + [Discord](https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Discord.yaml)
