@@ -468,7 +468,7 @@ proxy-groups:
   #   name: Local-Proxy
   #   type: fallback
   #   url: *health-check-url
-  #   interval: 30
+  #   interval: 6
   #   filter: ''
   #   use:
   #     - local
