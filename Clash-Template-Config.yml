@@ -672,12 +672,6 @@ proxy-groups:
     proxies:
       *proxies-all-fdirect
   -
-    name: 国外媒体
-    icon: *icon-ForeignMedia
-    type: select
-    proxies:
-      *proxies-all
-  -
     name: Spotify
     icon: *icon-Spotify
     type: select
