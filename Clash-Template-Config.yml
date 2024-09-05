@@ -4,8 +4,8 @@ BASE-DATA:
   common:
     health-check-url: &health-check-url http://www.gstatic.com/generate_204
     proxies-all: &proxies-all
-      - 🔰国外流量
-      - 🚀直接连接
+      - 国外流量
+      - 直接连接
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
       - 🇸🇬 AIRPORT-SG
@@ -23,8 +23,8 @@ BASE-DATA:
       - WARP+
       - ProxyChain
     proxies-all-fdirect: &proxies-all-fdirect
-      - 🚀直接连接
-      - 🔰国外流量
+      - 直接连接
+      - 国外流量
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
       - 🇸🇬 AIRPORT-SG
@@ -76,7 +76,7 @@ BASE-DATA:
       - WARP+
     proxies-all-for-tiktok: &proxies-all-for-tiktok
       - 🇺🇸 AIRPORT-US
-      - 🔰国外流量
+      - 国外流量
       - AIRPORT
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
@@ -528,113 +528,113 @@ proxy-groups:
   #   use:
   #     - local
   # -
-  #   name: 🔰国外流量-AUTO
+  #   name: 国外流量-AUTO
   #   icon: *icon-Area
   #   type: url-test
   #   url: *health-check-url
   #   interval: 30
   #   proxies:
   #     - Local-Proxy
-  #     - 🔰国外流量-BASE
+  #     - 国外流量-BASE
   # -
-  #   name: ⚓️其他流量-AUTO
+  #   name: 其他流量-AUTO
   #   icon: *icon-Final
   #   type: url-test
   #   url: *health-check-url
   #   interval: 30
   #   proxies:
   #     - Local-Proxy
-  #     - ⚓️其他流量-BASE
+  #     - 其他流量-BASE
   # -
-  #   name: 🔰国外流量
+  #   name: 国外流量
   #   icon: *icon-Area
   #   type: select
   #   proxies:
-  #     - 🔰国外流量-AUTO
-  #     - 🔰国外流量-BASE
+  #     - 国外流量-AUTO
+  #     - 国外流量-BASE
   #     - Local-Proxy
   # -
-  #   name: ⚓️其他流量
+  #   name: 其他流量
   #   icon: *icon-Final
   #   type: select
   #   proxies:
-  #     - ⚓️其他流量-AUTO
-  #     - ⚓️其他流量-BASE
+  #     - 其他流量-AUTO
+  #     - 其他流量-BASE
   #     - Local-Proxy
   # -
-  #   name: 🔰国外流量-BASE
+  #   name: 国外流量-BASE
   #   icon: *icon-Area
   #   type: select
   #   proxies:
   #     *proxies-all-oforeign    
   # -
-  #   name: ⚓️其他流量-BASE
+  #   name: 其他流量-BASE
   #   icon: *icon-Final
   #   type: select
   #   proxies:
   #     *proxies-all
   -
-    name: 🔰国外流量
+    name: 国外流量
     icon: *icon-Area
     type: select
     proxies:
       *proxies-all-oforeign
   -
-    name: ⚓️其他流量
+    name: 其他流量
     icon: *icon-Final
     type: select
     proxies:
       *proxies-all
   -
-    name: ✈️Telegram
+    name: Telegram
     icon: *icon-Telegram
     type: select
     proxies:
       *proxies-all
   -
-    name: 🎙Discord
+    name: Discord
     icon: *icon-Discord
     type: select
     proxies:
       *proxies-all
   -
-    name: 📘Facebook
+    name: Facebook
     icon: *icon-Facebook
     type: select
     proxies:
       *proxies-all
   -
-    name: 🤖OpenAI
+    name: OpenAI
     icon: *icon-OpenAI
     type: select
     proxies:
       *proxies-all-for-openai
   -
-    name: 🤖Claude
+    name: Claude
     icon: *icon-Claude
     type: select
     proxies:
       *proxies-all-for-claude
   -
-    name: 🤖Gemini
+    name: Gemini
     icon: *icon-Gemini
     type: select
     proxies:
       *proxies-all-for-gemini
   -
-    name: 🎬Youtube
+    name: Youtube
     icon: *icon-YouTube
     type: select
     proxies:
       *proxies-all
   -
-    name: 🎬TikTok
+    name: TikTok
     icon: *icon-TikTok
     type: select
     proxies:
       *proxies-all-for-tiktok
   -
-    name: 🎬Netflix
+    name: Netflix
     icon: *icon-Netflix
     type: select
     filter: *proxy-filter-special-streaming-media
@@ -642,7 +642,7 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: 🎬DisneyPlus
+    name: DisneyPlus
     icon: *icon-Disney
     type: select
     filter: *proxy-filter-special-streaming-media
@@ -650,7 +650,7 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: 🎬Hulu
+    name: Hulu
     icon: *icon-Hulu
     type: select
     filter: *proxy-filter-special-streaming-media
@@ -658,7 +658,7 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: 🎬HBO
+    name: HBO
     icon: *icon-HBO
     type: select
     filter: *proxy-filter-special-streaming-media
@@ -666,104 +666,104 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: 🎬哔哩哔哩
+    name: 哔哩哔哩
     icon: *icon-bilibili
     type: select
     proxies:
       *proxies-all-fdirect
   -
-    name: 🎬国外媒体
+    name: 国外媒体
     icon: *icon-ForeignMedia
     type: select
     proxies:
       *proxies-all
   -
-    name: 🎧Spotify
+    name: Spotify
     icon: *icon-Spotify
     type: select
     proxies:
       *proxies-all
   -
-    name: 🎮Steam
+    name: Steam
     icon: *icon-Steam
     type: select
     proxies:
       *proxies-all
   -
-    name: 🎮Ubisoft
+    name: Ubisoft
     icon: *icon-Ubisoft
     type: select
     proxies:
       *proxies-all
   -
-    name: 🎮Netch
+    name: Netch
     icon: *icon-Game
     type: select
     proxies:
       *proxies-all
   -
-    name: 💻Microsoft
+    name: Microsoft
     icon: *icon-Microsoft
     type: select
     proxies:
       *proxies-all-fdirect
   -
-    name: ☁OneDrive
+    name: OneDrive
     icon: *icon-OneDrive
     type: select
     proxies:
       *proxies-all-fdirect
   -
-    name: 📧OutLook
+    name: OutLook
     icon: *icon-Mail
     type: select
     proxies:
       *proxies-all
   -
-    name: 🤖NewBing
+    name: NewBing
     icon: *icon-Copilot
     type: select
     proxies:
       *proxies-all
   -
-    name: 💽PikPak
+    name: PikPak
     icon: *icon-Pikpak
     type: select
     proxies:
       *proxies-all
   -
-    name: 🧧Paypal
+    name: Paypal
     icon: *icon-PayPal
     type: select
     proxies:
       *proxies-all
   -
-    name: 🚚Amazon
+    name: Amazon
     icon: *icon-Amazon
     type: select
     proxies:
       *proxies-all-fdirect
   -
-    name: 📡Speedtest
+    name: Speedtest
     icon: *icon-Speedtest
     type: select
     proxies:
       *proxies-all-fdirect
   -
-    name: 🍎苹果服务
+    name: 苹果服务
     icon: *icon-Apple
     type: select
     proxies:
       *proxies-all-fdirect
   -
-    name: 🔽IDM
+    name: IDM
     icon: *icon-Download
     type: select
     proxies:
-      - 🚀直接连接
-      - 🔰国外流量
+      - 直接连接
+      - 国外流量
   -
-    name: 🚀直接连接
+    name: 直接连接
     icon: *icon-Direct
     type: select
     proxies:
@@ -915,48 +915,48 @@ rules:
   - DOMAIN-KEYWORD,aria2,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN-SUFFIX,lancache.steamcontent.com,DIRECT
-  - DOMAIN,yacd.haishan.me,🔰国外流量
-  - RULE-SET,OpenAI,🤖OpenAI
-  - RULE-SET,Claude,🤖Claude
-  - RULE-SET,Gemini,🤖Gemini
+  - DOMAIN,yacd.haishan.me,国外流量
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,Claude,Claude
+  - RULE-SET,Gemini,Gemini
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
-  - RULE-SET,Apple,🍎苹果服务
-  - RULE-SET,Adobe,⚓️其他流量
-  - RULE-SET,Amazon,🚚Amazon
-  - RULE-SET,BiliBili,🎬哔哩哔哩
-  - RULE-SET,GitHub,🔰国外流量
-  - RULE-SET,Google,🔰国外流量
-  - RULE-SET,NewBing,🤖NewBing
-  - RULE-SET,OneDrive,☁OneDrive
-  - RULE-SET,OutLook,📧OutLook
-  - RULE-SET,Microsoft,💻Microsoft
-  - RULE-SET,Netflix,🎬Netflix 
-  - RULE-SET,DisneyPlus,🎬DisneyPlus 
-  - RULE-SET,Hulu,🎬Hulu
-  - RULE-SET,HBO,🎬HBO
-  - RULE-SET,TikTok,🎬TikTok
-  - RULE-SET,Speedtest,📡Speedtest
-  - RULE-SET,Steam,🎮Steam
-  - RULE-SET,Ubisoft,🎮Ubisoft
-  - RULE-SET,Netch,🎮Netch
-  - RULE-SET,Spotify,🎧Spotify
-  - RULE-SET,PikPak,💽PikPak
-  - RULE-SET,Telegram,✈️Telegram 
-  - RULE-SET,Twitter,🔰国外流量 
-  - RULE-SET,Tencent,🚀直接连接
-  - RULE-SET,YouTube,🎬Youtube 
-  - RULE-SET,PayPal,🧧Paypal
-  - RULE-SET,Discord,🎙Discord
-  - RULE-SET,Facebook,📘Facebook 
-  - RULE-SET,Proxy,🔰国外流量
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Adobe,其他流量
+  - RULE-SET,Amazon,Amazon
+  - RULE-SET,BiliBili,哔哩哔哩
+  - RULE-SET,GitHub,国外流量
+  - RULE-SET,Google,国外流量
+  - RULE-SET,NewBing,NewBing
+  - RULE-SET,OneDrive,OneDrive
+  - RULE-SET,OutLook,OutLook
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Netflix,Netflix 
+  - RULE-SET,DisneyPlus,DisneyPlus 
+  - RULE-SET,Hulu,Hulu
+  - RULE-SET,HBO,HBO
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Speedtest,Speedtest
+  - RULE-SET,Steam,Steam
+  - RULE-SET,Ubisoft,Ubisoft
+  - RULE-SET,Netch,Netch
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,PikPak,PikPak
+  - RULE-SET,Telegram,Telegram 
+  - RULE-SET,Twitter,国外流量 
+  - RULE-SET,Tencent,直接连接
+  - RULE-SET,YouTube,Youtube 
+  - RULE-SET,PayPal,Paypal
+  - RULE-SET,Discord,Discord
+  - RULE-SET,Facebook,Facebook 
+  - RULE-SET,Proxy,国外流量
   - RULE-SET,Direct,DIRECT
-  - RULE-SET,IDM,🔽IDM
-  - DOMAIN-SUFFIX,live.cn,🚀直接连接
+  - RULE-SET,IDM,IDM
+  - DOMAIN-SUFFIX,live.cn,直接连接
 
   - GEOIP,CN,DIRECT
-  - MATCH,⚓️其他流量
+  - MATCH,其他流量
 
 rule-providers:
   AdBlock: 
