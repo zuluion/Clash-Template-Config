@@ -4,7 +4,7 @@ BASE-DATA:
   common:
     health-check-url: &health-check-url http://www.gstatic.com/generate_204
     proxies-all: &proxies-all
-      - 国外流量
+      - Foreign-StrategySwitch
       - 直接连接
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
@@ -24,7 +24,7 @@ BASE-DATA:
       - ProxyChain
     proxies-all-fdirect: &proxies-all-fdirect
       - 直接连接
-      - 国外流量
+      - Foreign-StrategySwitch
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
       - 🇸🇬 AIRPORT-SG
@@ -76,7 +76,7 @@ BASE-DATA:
       - WARP+
     proxies-all-for-tiktok: &proxies-all-for-tiktok
       - 🇺🇸 AIRPORT-US
-      - 国外流量
+      - Foreign-StrategySwitch
       - AIRPORT
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
@@ -336,6 +336,7 @@ BASE-DATA:
     icon-Claude: &icon-Claude https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Claude.png
     icon-Gemini: &icon-Gemini https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/AI.png
     icon-Ubisoft: &icon-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Ubisoft.png
+    icon-Auto: &icon-Auto https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Auto.png
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -519,6 +520,40 @@ proxy-groups:
   # relay chains the proxies. proxies shall not contain a relay. No UDP support.
   # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
   # -
+  #   name: Foreign-StrategySwitch
+  #   icon: *icon-Area
+  #   type: select
+  #   proxies:
+  #     - Foreign-AUTO
+  #     - Foreign-SELECT
+  #     - Local-Proxy
+  # -
+  #   name: Other-StrategySwitch
+  #   icon: *icon-Area
+  #   type: select
+  #   proxies:
+  #     - Other-AUTO
+  #     - Other-SELECT
+  #     - Local-Proxy
+    # -
+  #   name: Foreign-AUTO
+  #   icon: *icon-Auto
+  #   type: url-test
+  #   url: *health-check-url
+  #   interval: 30
+  #   proxies:
+  #     - Local-Proxy
+  #     - Foreign-SELECT
+  # -
+  #   name: Other-AUTO
+  #   icon: *icon-Auto
+  #   type: url-test
+  #   url: *health-check-url
+  #   interval: 30
+  #   proxies:
+  #     - Local-Proxy
+  #     - Other-SELECT
+  # -
   #   name: Local-Proxy
   #   icon: *icon-Proxy
   #   type: fallback
@@ -528,47 +563,13 @@ proxy-groups:
   #   use:
   #     - local
   # -
-  #   name: 国外流量-AUTO
-  #   icon: *icon-Area
-  #   type: url-test
-  #   url: *health-check-url
-  #   interval: 30
-  #   proxies:
-  #     - Local-Proxy
-  #     - 国外流量-BASE
-  # -
-  #   name: 其他流量-AUTO
+  #   name: Foreign-SELECT
   #   icon: *icon-Final
-  #   type: url-test
-  #   url: *health-check-url
-  #   interval: 30
-  #   proxies:
-  #     - Local-Proxy
-  #     - 其他流量-BASE
-  # -
-  #   name: 国外流量
-  #   icon: *icon-Area
-  #   type: select
-  #   proxies:
-  #     - 国外流量-AUTO
-  #     - 国外流量-BASE
-  #     - Local-Proxy
-  # -
-  #   name: 其他流量
-  #   icon: *icon-Final
-  #   type: select
-  #   proxies:
-  #     - 其他流量-AUTO
-  #     - 其他流量-BASE
-  #     - Local-Proxy
-  # -
-  #   name: 国外流量-BASE
-  #   icon: *icon-Area
   #   type: select
   #   proxies:
   #     *proxies-all-oforeign    
   # -
-  #   name: 其他流量-BASE
+  #   name: Other-SELECT
   #   icon: *icon-Final
   #   type: select
   #   proxies:
@@ -760,6 +761,7 @@ proxy-groups:
     name: 直接连接
     icon: *icon-Direct
     type: select
+    hidden: true
     proxies:
       - DIRECT
   -
