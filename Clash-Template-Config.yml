@@ -282,6 +282,60 @@ BASE-DATA:
         rule-file-path-PikPak: &rule-file-path-PikPak myprovider/ruleset/PikPak.yaml
         rule-provider-url-PikPak: &rule-provider-url-PikPak https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PikPak.yaml
 
+  icon-providers-config:
+    icon-Area: &icon-Area https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Area.png
+    icon-Final: &icon-Final https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Final.png
+    icon-Telegram: &icon-Telegram https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Telegram.png
+    icon-Discord: &icon-Discord https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Discord.png
+    icon-Facebook: &icon-Facebook https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Facebook.png
+    icon-YouTube: &icon-YouTube https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/YouTube.png
+    icon-TikTok: &icon-TikTok https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/TikTok_1.png
+    icon-Netflix: &icon-Netflix https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Netflix.png
+    icon-Disney: &icon-Disney https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Disney+_1.png
+    icon-Hulu: &icon-Hulu https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Hulu.png
+    icon-HBO: &icon-HBO https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/HBO_1.png
+    icon-bilibili: &icon-bilibili https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/bilibili_1.png
+    icon-ForeignMedia: &icon-ForeignMedia https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/ForeignMedia.png
+    icon-Spotify: &icon-Spotify https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Spotify.png
+    icon-Steam: &icon-Steam https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Steam.png
+    icon-Microsoft: &icon-Microsoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Microsoft.png
+    icon-PayPal: &icon-PayPal https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/PayPal.png
+    icon-Amazon: &icon-Amazon https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Amazon_1.png
+    icon-Speedtest: &icon-Speedtest https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Speedtest.png
+    icon-Apple: &icon-Apple https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Apple_1.png
+    icon-Download: &icon-Download https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Download.png
+    icon-Direct: &icon-Direct https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Direct.png
+    icon-Airport: &icon-Airport https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Airport.png
+    icon-Hong_Kong: &icon-Hong_Kong https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Hong_Kong.png
+    icon-Taiwan: &icon-Taiwan https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Taiwan.png
+    icon-Singapore: &icon-Singapore https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Singapore.png
+    icon-Japan: &icon-Japan https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Japan.png
+    icon-Korea: &icon-Korea https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Korea.png
+    icon-United_States: &icon-United_States https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/United_States.png
+    icon-India: &icon-India https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/India.png
+    icon-United_Kingdom: &icon-United_Kingdom https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/United_Kingdom.png
+    icon-Russia: &icon-Russia https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Russia.png
+    icon-Canada: &icon-Canada https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Canada.png
+    icon-France: &icon-France https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/France.png
+    icon-Australia: &icon-Australia https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Australia.png
+    icon-Turkey: &icon-Turkey https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Turkey.png
+    icon-Thailand: &icon-Thailand https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Thailand.png
+    icon-Argentina: &icon-Argentina https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Argentina.png
+    icon-Philippines: &icon-Philippines https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Philippines.png
+    icon-Malaysia: &icon-Malaysia https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Malaysia.png
+    icon-Brazil: &icon-Brazil https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Brazil.png
+    icon-Bot: &icon-Bot https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Bot.png
+    icon-OneDrive: &icon-OneDrive https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/OneDrive.png
+    icon-Game: &icon-Game https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Game.png
+    icon-Cloudflare: &icon-Cloudflare https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Cloudflare.png
+    icon-Proxy: &icon-Proxy https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Proxy.png
+    icon-Mail: &icon-Mail https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Mail.png
+    icon-OpenAI: &icon-OpenAI https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/ChatGPT.png
+    icon-Copilot: &icon-Copilot https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Copilot.png
+    icon-Pikpak: &icon-Pikpak https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Pikpak.png
+    icon-Claude: &icon-Claude https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Claude.png
+    icon-Gemini: &icon-Gemini https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/AI.png
+    icon-Ubisoft: &icon-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Ubisoft.png
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -466,6 +520,7 @@ proxy-groups:
   # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
   # -
   #   name: Local-Proxy
+  #   icon: *icon-Proxy
   #   type: fallback
   #   url: *health-check-url
   #   interval: 6
@@ -474,6 +529,7 @@ proxy-groups:
   #     - local
   # -
   #   name: 🔰国外流量-AUTO
+  #   icon: *icon-Area
   #   type: url-test
   #   url: *health-check-url
   #   interval: 30
@@ -482,6 +538,7 @@ proxy-groups:
   #     - 🔰国外流量-BASE
   # -
   #   name: ⚓️其他流量-AUTO
+  #   icon: *icon-Final
   #   type: url-test
   #   url: *health-check-url
   #   interval: 30
@@ -490,6 +547,7 @@ proxy-groups:
   #     - ⚓️其他流量-BASE
   # -
   #   name: 🔰国外流量
+  #   icon: *icon-Area
   #   type: select
   #   proxies:
   #     - 🔰国外流量-AUTO
@@ -497,6 +555,7 @@ proxy-groups:
   #     - Local-Proxy
   # -
   #   name: ⚓️其他流量
+  #   icon: *icon-Final
   #   type: select
   #   proxies:
   #     - ⚓️其他流量-AUTO
@@ -504,66 +563,79 @@ proxy-groups:
   #     - Local-Proxy
   # -
   #   name: 🔰国外流量-BASE
+  #   icon: *icon-Area
   #   type: select
   #   proxies:
   #     *proxies-all-oforeign    
   # -
   #   name: ⚓️其他流量-BASE
+  #   icon: *icon-Final
   #   type: select
   #   proxies:
   #     *proxies-all
   -
     name: 🔰国外流量
+    icon: *icon-Area
     type: select
     proxies:
       *proxies-all-oforeign
   -
     name: ⚓️其他流量
+    icon: *icon-Final
     type: select
     proxies:
       *proxies-all
   -
     name: ✈️Telegram
+    icon: *icon-Telegram
     type: select
     proxies:
       *proxies-all
   -
     name: 🎙Discord
+    icon: *icon-Discord
     type: select
     proxies:
       *proxies-all
   -
     name: 📘Facebook
+    icon: *icon-Facebook
     type: select
     proxies:
       *proxies-all
   -
     name: 🤖OpenAI
+    icon: *icon-OpenAI
     type: select
     proxies:
       *proxies-all-for-openai
   -
     name: 🤖Claude
+    icon: *icon-Claude
     type: select
     proxies:
       *proxies-all-for-claude
   -
     name: 🤖Gemini
+    icon: *icon-Gemini
     type: select
     proxies:
       *proxies-all-for-gemini
   -
     name: 🎬Youtube
+    icon: *icon-YouTube
     type: select
     proxies:
       *proxies-all
   -
     name: 🎬TikTok
+    icon: *icon-TikTok
     type: select
     proxies:
       *proxies-all-for-tiktok
   -
     name: 🎬Netflix
+    icon: *icon-Netflix
     type: select
     filter: *proxy-filter-special-streaming-media
     use: *proxy-providers-use
@@ -571,6 +643,7 @@ proxy-groups:
       *proxies-all
   -
     name: 🎬DisneyPlus
+    icon: *icon-Disney
     type: select
     filter: *proxy-filter-special-streaming-media
     use: *proxy-providers-use
@@ -578,6 +651,7 @@ proxy-groups:
       *proxies-all
   -
     name: 🎬Hulu
+    icon: *icon-Hulu
     type: select
     filter: *proxy-filter-special-streaming-media
     use: *proxy-providers-use
@@ -585,6 +659,7 @@ proxy-groups:
       *proxies-all
   -
     name: 🎬HBO
+    icon: *icon-HBO
     type: select
     filter: *proxy-filter-special-streaming-media
     use: *proxy-providers-use
@@ -592,176 +667,211 @@ proxy-groups:
       *proxies-all
   -
     name: 🎬哔哩哔哩
+    icon: *icon-bilibili
     type: select
     proxies:
       *proxies-all-fdirect
   -
     name: 🎬国外媒体
+    icon: *icon-ForeignMedia
     type: select
     proxies:
       *proxies-all
   -
     name: 🎧Spotify
+    icon: *icon-Spotify
     type: select
     proxies:
       *proxies-all
   -
     name: 🎮Steam
+    icon: *icon-Steam
     type: select
     proxies:
       *proxies-all
   -
     name: 🎮Ubisoft
+    icon: *icon-Ubisoft
     type: select
     proxies:
       *proxies-all
   -
     name: 🎮Netch
+    icon: *icon-Game
     type: select
     proxies:
       *proxies-all
   -
     name: 💻Microsoft
+    icon: *icon-Microsoft
     type: select
     proxies:
       *proxies-all-fdirect
   -
     name: ☁OneDrive
+    icon: *icon-OneDrive
     type: select
     proxies:
       *proxies-all-fdirect
   -
     name: 📧OutLook
+    icon: *icon-Mail
     type: select
     proxies:
       *proxies-all
   -
     name: 🤖NewBing
+    icon: *icon-Copilot
     type: select
     proxies:
       *proxies-all
   -
     name: 💽PikPak
+    icon: *icon-Pikpak
     type: select
     proxies:
       *proxies-all
   -
     name: 🧧Paypal
+    icon: *icon-PayPal
     type: select
     proxies:
       *proxies-all
   -
     name: 🚚Amazon
+    icon: *icon-Amazon
     type: select
     proxies:
       *proxies-all-fdirect
   -
     name: 📡Speedtest
+    icon: *icon-Speedtest
     type: select
     proxies:
       *proxies-all-fdirect
   -
     name: 🍎苹果服务
+    icon: *icon-Apple
     type: select
     proxies:
       *proxies-all-fdirect
   -
     name: 🔽IDM
+    icon: *icon-Download
     type: select
     proxies:
       - 🚀直接连接
       - 🔰国外流量
   -
     name: 🚀直接连接
+    icon: *icon-Direct
     type: select
     proxies:
       - DIRECT
   -
     name: AIRPORT
+    icon: *icon-Airport
     type: select
     use: *proxy-providers-use
   -
     name: 🇭🇰 AIRPORT-HK
+    icon: *icon-Hong_Kong
     type: select
     filter: *proxy-filter-HK
     use: *proxy-providers-use
   -
     name: 🇨🇳 AIRPORT-TW
+    icon: *icon-Taiwan
     type: select
     filter: *proxy-filter-TW
     use: *proxy-providers-use
   -
     name: 🇸🇬 AIRPORT-SG
+    icon: *icon-Singapore
     type: select
     filter: *proxy-filter-SG
     use: *proxy-providers-use
   -
     name: 🇯🇵 AIRPORT-JP
+    icon: *icon-Japan
     type: select
     filter: *proxy-filter-JP
     use: *proxy-providers-use
   -
     name: 🇰🇷 AIRPORT-Korea
+    icon: *icon-Korea
     type: select
     filter: *proxy-filter-Korea
     use: *proxy-providers-use
   -
     name: 🇺🇸 AIRPORT-US
+    icon: *icon-United_States
     type: select
     filter: *proxy-filter-US
     use: *proxy-providers-use
   -
     name: 🇮🇳 AIRPORT-India
+    icon: *icon-India
     type: select
     filter: *proxy-filter-India
     use: *proxy-providers-use
   -
     name: 🇬🇧 AIRPORT-EN
+    icon: *icon-United_Kingdom
     type: select
     filter: *proxy-filter-EN
     use: *proxy-providers-use
   -
     name: 🇮🇪 AIRPORT-Ireland
+    icon: *icon-United_Kingdom
     type: select
     filter: *proxy-filter-Ireland
     use: *proxy-providers-use
   -
     name: 🇷🇺 AIRPORT-RU
+    icon: *icon-Russia
     type: select
     filter: *proxy-filter-RU
     use: *proxy-providers-use
   -
     name: 🇨🇦 AIRPORT-Canada
+    icon: *icon-Canada
     type: select
     filter: *proxy-filter-Canada
     use: *proxy-providers-use
   -
     name: 🇫🇷 AIRPORT-FR
+    icon: *icon-France
     type: select
     filter: *proxy-filter-FR
     use: *proxy-providers-use
   -
     name: 🇦🇺 AIRPORT-AU
+    icon: *icon-Australia
     type: select
     filter: *proxy-filter-AU
     use: *proxy-providers-use
   -
     name: WARP+
+    icon: *icon-Cloudflare
     type: select
     filter: *proxy-filter-WARP
     use: *proxy-providers-use
   -
     name: ProxyChain_Start
+    icon: *icon-Proxy
     type: select
     proxies:
       *proxies-all-for-proxychain
   -
     name: ProxyChain_Landing
+    icon: *icon-Proxy
     type: select
     proxies:
       *proxies-all-for-proxychain
   - 
     name: ProxyChain
+    icon: *icon-Proxy
     type: relay
     # disable-udp: true
     proxies:
