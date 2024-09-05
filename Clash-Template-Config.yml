@@ -4,7 +4,7 @@ BASE-DATA:
   common:
     health-check-url: &health-check-url http://www.gstatic.com/generate_204
     proxies-all: &proxies-all
-      - Foreign-StrategySwitch
+      - 国外流量
       - 直接连接
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
@@ -24,7 +24,7 @@ BASE-DATA:
       - ProxyChain
     proxies-all-fdirect: &proxies-all-fdirect
       - 直接连接
-      - Foreign-StrategySwitch
+      - 国外流量
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
       - 🇸🇬 AIRPORT-SG
@@ -76,7 +76,7 @@ BASE-DATA:
       - WARP+
     proxies-all-for-tiktok: &proxies-all-for-tiktok
       - 🇺🇸 AIRPORT-US
-      - Foreign-StrategySwitch
+      - 国外流量
       - AIRPORT
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
