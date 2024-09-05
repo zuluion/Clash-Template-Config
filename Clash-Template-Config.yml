@@ -744,7 +744,7 @@ proxy-groups:
     proxies:
       *proxies-all-fdirect
   -
-    name: 苹果服务
+    name: Apple
     icon: *icon-Apple
     type: select
     proxies:
@@ -916,7 +916,7 @@ rules:
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
-  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Apple,Apple
   - RULE-SET,Adobe,其他流量
   - RULE-SET,Amazon,Amazon
   - RULE-SET,BiliBili,哔哩哔哩
