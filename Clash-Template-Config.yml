@@ -203,9 +203,9 @@ BASE-DATA:
       Netch:
         rule-file-path-Netch: &rule-file-path-Netch myprovider/ruleset/Netch.yaml
         rule-provider-url-Netch: &rule-provider-url-Netch https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netch.yaml
-      NewBing:
-        rule-file-path-NewBing: &rule-file-path-NewBing myprovider/ruleset/NewBing.yaml
-        rule-provider-url-NewBing: &rule-provider-url-NewBing https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/NewBing.yaml
+      Copilot:
+        rule-file-path-Copilot: &rule-file-path-Copilot myprovider/ruleset/Copilot.yaml
+        rule-provider-url-Copilot: &rule-provider-url-Copilot https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Copilot.yaml
       OneDrive:
         rule-file-path-OneDrive: &rule-file-path-OneDrive myprovider/ruleset/OneDrive.yaml
         rule-provider-url-OneDrive: &rule-provider-url-OneDrive https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/OneDrive.yaml
@@ -720,7 +720,7 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: NewBing
+    name: Copilot
     icon: *icon-Copilot
     type: select
     proxies:
@@ -928,7 +928,7 @@ rules:
   - RULE-SET,BiliBili,哔哩哔哩
   - RULE-SET,GitHub,国外流量
   - RULE-SET,Google,国外流量
-  - RULE-SET,NewBing,NewBing
+  - RULE-SET,Copilot,Copilot
   - RULE-SET,OneDrive,OneDrive
   - RULE-SET,OutLook,OutLook
   - RULE-SET,Microsoft,Microsoft
@@ -1049,11 +1049,11 @@ rule-providers:
     path: *rule-file-path-Gemini
     url: *rule-provider-url-Gemini
     interval: *rule-interval
-  NewBing: 
+  Copilot: 
     type: http
     behavior: classical
-    path: *rule-file-path-NewBing
-    url: *rule-provider-url-NewBing
+    path: *rule-file-path-Copilot
+    url: *rule-provider-url-Copilot
     interval: *rule-interval
   Netflix: 
     type: http
