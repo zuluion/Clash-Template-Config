@@ -139,7 +139,7 @@ BASE-DATA:
       proxy-file-path-local: &proxy-file-path-local myprovider/proxies/provider-local.yml
     proxy-providers-filter:
       proxy-filter-WARP: &proxy-filter-WARP 'WARP+'
-      proxy-filter-HK: &proxy-filter-HK '港|HK|HongKong'
+      proxy-filter-HK: &proxy-filter-HK '港|HK|HongKong|Hong Kong'
       proxy-filter-TW: &proxy-filter-TW '台湾|TW|Taiwan'
       proxy-filter-SG: &proxy-filter-SG '新加坡|SG|Singapore'
       proxy-filter-JP: &proxy-filter-JP '日本|JP|Japan'
