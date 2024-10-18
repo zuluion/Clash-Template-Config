@@ -127,12 +127,15 @@ BASE-DATA:
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use 
       - airport
+      # - add-on
       # - warp
       # - local
     proxy-providers-common:
       airport-interval: &airport-interval 36000
       url-airport: &url-airport "" # 这里填入机场链接
       proxy-file-path-AirPort: &proxy-file-path-AirPort myprovider/proxies/provider-airport.yml
+      url-add-on: &url-add-on "" # 这里填入第二个机场链接
+      proxy-file-path-Add-On: &proxy-file-path-Add-On myprovider/proxies/provider-add-on.yml
       url-warp: &url-warp "" # 这里填入直接托管的WARP配置
       proxy-file-path-warp: &proxy-file-path-warp myprovider/proxies/provider-warp.yml
       url-local: &url-local "" # 这里填入直接托管的本地代理配置
@@ -885,6 +888,16 @@ proxy-providers:
       interval: *airport-interval
       # lazy: true
       url: *health-check-url
+  # add-on:
+  #   type: http
+  #   url: *url-add-on
+  #   interval: *airport-interval
+  #   path: *proxy-file-path-Add-On
+  #   health-check:
+  #     enable: true
+  #     interval: *airport-interval
+  #     # lazy: true
+  #     url: *health-check-url
   # warp:
   #   type: http
   #   url: *url-warp 
