@@ -123,7 +123,18 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
-  
+    proxies-all-for-perplexity: &proxies-all-for-perplexity
+      - 🇺🇸 AIRPORT-US
+      - 🇬🇧 AIRPORT-EN
+      - 🇰🇷 AIRPORT-Korea
+      - 🇯🇵 AIRPORT-JP
+      - 🇸🇬 AIRPORT-SG
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
+
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use 
       - airport
@@ -224,6 +235,9 @@ BASE-DATA:
       Gemini:
         rule-file-path-Gemini: &rule-file-path-Gemini myprovider/ruleset/Gemini.yaml
         rule-provider-url-Gemini: &rule-provider-url-Gemini https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Gemini.yaml
+      Perplexity:
+        rule-file-path-Perplexity: &rule-file-path-Perplexity myprovider/ruleset/Perplexity.yaml
+        rule-provider-url-Perplexity: &rule-provider-url-Perplexity https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Perplexity.yaml
       Spotify:
         rule-file-path-Spotify: &rule-file-path-Spotify myprovider/ruleset/Spotify.yaml
         rule-provider-url-Spotify: &rule-provider-url-Spotify https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml
@@ -338,6 +352,7 @@ BASE-DATA:
     icon-Pikpak: &icon-Pikpak https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Pikpak.png
     icon-Claude: &icon-Claude https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Claude.png
     icon-Gemini: &icon-Gemini https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/AI.png
+    icon-Perplexity: &icon-Perplexity https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/AI.png
     icon-Ubisoft: &icon-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Ubisoft.png
     icon-Auto: &icon-Auto https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Auto.png
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -625,6 +640,11 @@ proxy-groups:
     type: select
     proxies:
       *proxies-all-for-gemini
+  - name: Perplexity
+    icon: *icon-Perplexity
+    type: select
+    proxies:
+      *proxies-all-for-perplexity
   -
     name: Youtube
     icon: *icon-YouTube
@@ -928,6 +948,7 @@ rules:
   - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Claude,Claude
   - RULE-SET,Gemini,Gemini
+  - RULE-SET,Perplexity,Perplexity
   - RULE-SET,DownLoadClient,DIRECT
   - RULE-SET,ProxyClient,DIRECT
   - RULE-SET,AdBlock,REJECT
@@ -1063,6 +1084,12 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-Copilot
     url: *rule-provider-url-Copilot
+    interval: *rule-interval
+  Perplexity:
+    type: http
+    behavior: classical
+    path: *rule-file-path-Perplexity
+    url: *rule-provider-url-Perplexity
     interval: *rule-interval
   Netflix: 
     type: http
