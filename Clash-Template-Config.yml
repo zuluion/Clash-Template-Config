@@ -352,7 +352,7 @@ BASE-DATA:
     icon-Pikpak: &icon-Pikpak https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Pikpak.png
     icon-Claude: &icon-Claude https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Claude.png
     icon-Gemini: &icon-Gemini https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/AI.png
-    icon-Perplexity: &icon-Perplexity https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/AI.png
+    icon-Perplexity: &icon-Perplexity https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Perplexity.png
     icon-Ubisoft: &icon-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Ubisoft.png
     icon-Auto: &icon-Auto https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Auto.png
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
