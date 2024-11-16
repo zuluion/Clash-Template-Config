@@ -60,3 +60,20 @@
 > 7. 新增加了proxychain(relay)配置，可以用未被墙的节点，拯救被墙的节点
 > 8. 新增了DNS配置，降低DNS污染几率
 > 9. 新增了localproxy配置，用于配置局域网的socks代理，勉强实现不同网络环境下的自动切换，默认禁用
+
+
+## Star history
+
+<a href="https://star-history.com/#zuluion/Clash-Template-Config&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=zuluion/Clash-Template-Config&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=zuluion/Clash-Template-Config&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=zuluion/Clash-Template-Config&type=Date" width="100%" />
+ </picture>
+</a>
+
+## Contributors
+
+<a href="https://github.com/zuluion/ProxySoftware-Template-Config/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zuluion/Clash-Template-Config" width="100%"/>
+</a>
