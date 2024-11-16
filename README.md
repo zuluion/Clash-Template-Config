@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://img.shields.io/github/license/zuluion/Clash-Template-Config" alt="License"/>
+  <img src="https://img.shields.io/github/stars/zuluion/Clash-Template-Config?style=social" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/zuluion/Clash-Template-Config" alt="Forks"/>
+</p>
+
 # Clash-Template-Config
 > 自用Clash配置文件模板
 
