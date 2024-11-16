@@ -85,5 +85,5 @@
 ## Contributors
 
 <a href="https://github.com/zuluion/ProxySoftware-Template-Config/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zuluion/Clash-Template-Config" width="100%"/>
+  <img src="https://contrib.rocks/image?repo=zuluion/Clash-Template-Config" width="100"/>
 </a>
