@@ -68,6 +68,10 @@
 > 9. 新增了localproxy配置，用于配置局域网的socks代理，勉强实现不同网络环境下的自动切换，默认禁用
 
 
+## Link
+1. [ProxySoftware-Template-Config](https://github.com/zuluion/ProxySoftware-Template-Config)
+
+
 ## Star history
 
 <a href="https://star-history.com/#zuluion/Clash-Template-Config&Date">
