@@ -134,6 +134,25 @@ BASE-DATA:
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
+    proxies-all-for-javsp: &proxies-all-for-javsp
+      - 🇯🇵 AIRPORT-JP
+      - 国外流量
+      - 直接连接
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇰🇷 AIRPORT-Korea
+      - 🇺🇸 AIRPORT-US
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
+      - AIRPORT
+      - WARP+
+      - ProxyChain
 
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use 
@@ -298,6 +317,10 @@ BASE-DATA:
       PikPak:
         rule-file-path-PikPak: &rule-file-path-PikPak myprovider/ruleset/PikPak.yaml
         rule-provider-url-PikPak: &rule-provider-url-PikPak https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PikPak.yaml
+      JavSP:
+        rule-file-path-JavSP: &rule-file-path-JavSP myprovider/ruleset/JavSP.yaml
+        rule-provider-url-JavSP: &rule-provider-url-JavSP https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/JavSP.yaml
+
 
   icon-providers-config:
     icon-Area: &icon-Area https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Area.png
@@ -355,6 +378,7 @@ BASE-DATA:
     icon-Perplexity: &icon-Perplexity https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Perplexity.png
     icon-Ubisoft: &icon-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Ubisoft.png
     icon-Auto: &icon-Auto https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Auto.png
+    icon-JavSP: &icon-JavSP https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/JavSP.png
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -774,6 +798,12 @@ proxy-groups:
     proxies:
       *proxies-all-fdirect
   -
+    name: JavSP
+    icon: *icon-JavSP
+    type: select
+    proxies:
+      *proxies-all-for-javsp
+  -
     name: IDM
     icon: *icon-Download
     type: select
@@ -980,6 +1010,7 @@ rules:
   - RULE-SET,PayPal,Paypal
   - RULE-SET,Discord,Discord
   - RULE-SET,Facebook,Facebook 
+  - RULE-SET,JavSP,JavSP 
   - RULE-SET,Proxy,国外流量
   - RULE-SET,Direct,DIRECT
   - RULE-SET,IDM,IDM
@@ -1222,4 +1253,10 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-PikPak
     url: *rule-provider-url-PikPak
+    interval: *rule-interval
+  JavSP: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-JavSP
+    url: *rule-provider-url-JavSP
     interval: *rule-interval
