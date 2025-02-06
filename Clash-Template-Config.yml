@@ -153,6 +153,22 @@ BASE-DATA:
       - AIRPORT
       - WARP+
       - ProxyChain
+    proxies-all-for-reddit: &proxies-all-for-reddit
+      - 🇺🇸 AIRPORT-US
+      - 国外流量
+      - AIRPORT
+      - 🇭🇰 AIRPORT-HK
+      - 🇨🇳 AIRPORT-TW
+      - 🇸🇬 AIRPORT-SG
+      - 🇯🇵 AIRPORT-JP
+      - 🇰🇷 AIRPORT-Korea
+      - 🇮🇳 AIRPORT-India
+      - 🇬🇧 AIRPORT-EN
+      - 🇮🇪 AIRPORT-Ireland
+      - 🇷🇺 AIRPORT-RU
+      - 🇨🇦 AIRPORT-Canada
+      - 🇫🇷 AIRPORT-FR
+      - 🇦🇺 AIRPORT-AU
 
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use 
@@ -320,6 +336,9 @@ BASE-DATA:
       JavSP:
         rule-file-path-JavSP: &rule-file-path-JavSP myprovider/ruleset/JavSP.yaml
         rule-provider-url-JavSP: &rule-provider-url-JavSP https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/JavSP.yaml
+      Reddit:
+        rule-file-path-Reddit: &rule-file-path-Reddit myprovider/ruleset/Reddit.yaml
+        rule-provider-url-Reddit: &rule-provider-url-Reddit https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Reddit.yaml
 
 
   icon-providers-config:
@@ -379,6 +398,7 @@ BASE-DATA:
     icon-Ubisoft: &icon-Ubisoft https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Ubisoft.png
     icon-Auto: &icon-Auto https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Auto.png
     icon-JavSP: &icon-JavSP https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/JavSP.png
+    icon-Reddit: &icon-Reddit https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Reddit.png
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -646,6 +666,12 @@ proxy-groups:
     type: select
     proxies:
       *proxies-all
+  -
+    name: Reddit
+    icon: *icon-Reddit
+    type: select
+    proxies:
+      *proxies-all-for-reddit
   -
     name: OpenAI
     icon: *icon-OpenAI
@@ -1009,7 +1035,8 @@ rules:
   - RULE-SET,YouTube,Youtube 
   - RULE-SET,PayPal,Paypal
   - RULE-SET,Discord,Discord
-  - RULE-SET,Facebook,Facebook 
+  - RULE-SET,Facebook,Facebook
+  - RULE-SET,Reddit,Reddit 
   - RULE-SET,JavSP,JavSP 
   - RULE-SET,Proxy,国外流量
   - RULE-SET,Direct,DIRECT
@@ -1259,4 +1286,10 @@ rule-providers:
     behavior: classical
     path: *rule-file-path-JavSP
     url: *rule-provider-url-JavSP
+    interval: *rule-interval
+  Reddit: 
+    type: http
+    behavior: classical
+    path: *rule-file-path-Reddit
+    url: *rule-provider-url-Reddit
     interval: *rule-interval
