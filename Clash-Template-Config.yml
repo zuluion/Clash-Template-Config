@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 基础数据 设置锚点 复用 
+# 基础数据 设置锚点 复用
 BASE-DATA:
   common:
     health-check-url: &health-check-url http://www.gstatic.com/generate_204
@@ -171,7 +171,7 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
 
   proxy-providers-config:
-    proxy-providers-use: &proxy-providers-use 
+    proxy-providers-use: &proxy-providers-use
       - airport
       # - add-on
       # - warp
@@ -179,9 +179,9 @@ BASE-DATA:
     proxy-providers-common:
       airport-interval: &airport-interval 36000
       url-airport: &url-airport "" # 这里填入机场链接
-      proxy-file-path-AirPort: &proxy-file-path-AirPort myprovider/proxies/provider-airport.yml
+      proxy-file-path-airport: &proxy-file-path-airport myprovider/proxies/provider-airport.yml
       url-add-on: &url-add-on "" # 这里填入第二个机场链接
-      proxy-file-path-Add-On: &proxy-file-path-Add-On myprovider/proxies/provider-add-on.yml
+      proxy-file-path-add-on: &proxy-file-path-add-on myprovider/proxies/provider-add-on.yml
       url-warp: &url-warp "" # 这里填入直接托管的WARP配置
       proxy-file-path-warp: &proxy-file-path-warp myprovider/proxies/provider-warp.yml
       url-local: &url-local "" # 这里填入直接托管的本地代理配置
@@ -211,7 +211,7 @@ BASE-DATA:
       proxy-filter-UA: &proxy-filter-UA '乌克兰|UA|Ukraine'
       proxy-filter-VN: &proxy-filter-VN '越南|VN|Viet Nam'
       proxy-filter-ZA: &proxy-filter-ZA '南非|ZA|South Africa'
-  
+
   rule-providers-config:
     rule-providers-common:
       rule-interval: &rule-interval 3600
@@ -232,12 +232,12 @@ BASE-DATA:
         rule-file-path-China: &rule-file-path-China myprovider/ruleset/China.yaml
         rule-provider-url-China: &rule-provider-url-China https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/China.yaml
       Bilibili:
-        rule-file-path-Bilibili: &rule-file-path-BiliBili myprovider/ruleset/Bilibili.yaml
-        rule-provider-url-BiliBili: &rule-provider-url-BiliBili https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Bilibili.yaml
+        rule-file-path-Bilibili: &rule-file-path-Bilibili myprovider/ruleset/Bilibili.yaml
+        rule-provider-url-Bilibili: &rule-provider-url-Bilibili https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Bilibili.yaml
       Facebook:
         rule-file-path-Facebook: &rule-file-path-Facebook myprovider/ruleset/Facebook.yaml
         rule-provider-url-Facebook: &rule-provider-url-Facebook https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Facebook.yaml
-      GitHub: 
+      GitHub:
         rule-file-path-GitHub: &rule-file-path-GitHub myprovider/ruleset/GitHub.yaml
         rule-provider-url-GitHub: &rule-provider-url-GitHub https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/GitHub.yaml
       Google:
@@ -298,26 +298,26 @@ BASE-DATA:
         rule-file-path-YouTube: &rule-file-path-YouTube myprovider/ruleset/YouTube.yaml
         rule-provider-url-YouTube: &rule-provider-url-YouTube https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/YouTube.yaml
       TikTok:
-        rule-file-path-TikTok: &rule-file-path-TikTok  myprovider/ruleset/TikTok.yaml
-        rule-provider-url-TikTok: &rule-provider-url-TikTok  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/TikTok.yaml
+        rule-file-path-TikTok: &rule-file-path-TikTok myprovider/ruleset/TikTok.yaml
+        rule-provider-url-TikTok: &rule-provider-url-TikTok https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/TikTok.yaml
       PayPal:
-        rule-file-path-PayPal: &rule-file-path-PayPal  myprovider/ruleset/PayPal.yaml
-        rule-provider-url-PayPal: &rule-provider-url-PayPal  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PayPal.yaml
+        rule-file-path-PayPal: &rule-file-path-PayPal myprovider/ruleset/PayPal.yaml
+        rule-provider-url-PayPal: &rule-provider-url-PayPal https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PayPal.yaml
       Discord:
-        rule-file-path-Discord: &rule-file-path-Discord  myprovider/ruleset/Discord.yaml
-        rule-provider-url-Discord: &rule-provider-url-Discord  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Discord.yaml
+        rule-file-path-Discord: &rule-file-path-Discord myprovider/ruleset/Discord.yaml
+        rule-provider-url-Discord: &rule-provider-url-Discord https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Discord.yaml
       Proxy:
-        rule-file-path-Proxy: &rule-file-path-Proxy  myprovider/ruleset/Proxy.yaml
-        rule-provider-url-Proxy: &rule-provider-url-Proxy  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Proxy.yaml
+        rule-file-path-Proxy: &rule-file-path-Proxy myprovider/ruleset/Proxy.yaml
+        rule-provider-url-Proxy: &rule-provider-url-Proxy https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Proxy.yaml
       ProxyClient:
-        rule-file-path-ProxyClient: &rule-file-path-ProxyClient  myprovider/ruleset/ProxyClient.yaml
-        rule-provider-url-ProxyClient: &rule-provider-url-ProxyClient  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/ProxyClient.yaml
+        rule-file-path-ProxyClient: &rule-file-path-ProxyClient myprovider/ruleset/ProxyClient.yaml
+        rule-provider-url-ProxyClient: &rule-provider-url-ProxyClient https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/ProxyClient.yaml
       DisneyPlus:
-        rule-file-path-DisneyPlus: &rule-file-path-DisneyPlus  myprovider/ruleset/DisneyPlus.yaml
-        rule-provider-url-DisneyPlus: &rule-provider-url-DisneyPlus  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/DisneyPlus.yaml
+        rule-file-path-DisneyPlus: &rule-file-path-DisneyPlus myprovider/ruleset/DisneyPlus.yaml
+        rule-provider-url-DisneyPlus: &rule-provider-url-DisneyPlus https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/DisneyPlus.yaml
       Hulu:
-        rule-file-path-Hulu: &rule-file-path-Hulu  myprovider/ruleset/Hulu.yaml
-        rule-provider-url-Hulu: &rule-provider-url-Hulu  https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Hulu.yaml
+        rule-file-path-Hulu: &rule-file-path-Hulu myprovider/ruleset/Hulu.yaml
+        rule-provider-url-Hulu: &rule-provider-url-Hulu https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Hulu.yaml
       HBO:
         rule-file-path-HBO: &rule-file-path-HBO myprovider/ruleset/HBO.yaml
         rule-provider-url-HBO: &rule-provider-url-HBO https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/HBO.yaml
@@ -402,7 +402,6 @@ BASE-DATA:
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -424,7 +423,7 @@ dns:
     - 114.114.114.114
     - 223.5.5.5
     - 8.8.8.8
-  enhanced-mode: fake-ip # 或 redir-host
+  enhanced-mode: fake-ip # fake-ip 或 redir-host
   fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 (CIDR 形式)
   # use-hosts: true # 查询 hosts 并返回 IP 记录
 
@@ -597,7 +596,7 @@ proxy-groups:
   #     - Other-AUTO
   #     - Other-SELECT
   #     - Local-Proxy
-    # -
+  # -
   #   name: Foreign-AUTO
   #   icon: *icon-Auto
   #   type: url-test
@@ -690,13 +689,14 @@ proxy-groups:
     type: select
     proxies:
       *proxies-all-for-gemini
-  - name: Perplexity
+  -
+    name: Perplexity
     icon: *icon-Perplexity
     type: select
     proxies:
       *proxies-all-for-perplexity
   -
-    name: Youtube
+    name: YouTube
     icon: *icon-YouTube
     type: select
     proxies:
@@ -740,7 +740,7 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: 哔哩哔哩
+    name: Bilibili
     icon: *icon-bilibili
     type: select
     proxies:
@@ -800,7 +800,7 @@ proxy-groups:
     proxies:
       *proxies-all
   -
-    name: Paypal
+    name: PayPal
     icon: *icon-PayPal
     type: select
     proxies:
@@ -944,7 +944,7 @@ proxy-groups:
     type: select
     proxies:
       *proxies-all-for-proxychain
-  - 
+  -
     name: ProxyChain
     icon: *icon-Proxy
     type: relay
@@ -956,9 +956,9 @@ proxy-groups:
 proxy-providers:
   airport:
     type: http
-    url: *url-airport 
+    url: *url-airport
     interval: *airport-interval
-    path: *proxy-file-path-AirPort
+    path: *proxy-file-path-airport
     health-check:
       enable: true
       interval: *airport-interval
@@ -968,7 +968,7 @@ proxy-providers:
   #   type: http
   #   url: *url-add-on
   #   interval: *airport-interval
-  #   path: *proxy-file-path-Add-On
+  #   path: *proxy-file-path-add-on
   #   health-check:
   #     enable: true
   #     interval: *airport-interval
@@ -976,7 +976,7 @@ proxy-providers:
   #     url: *health-check-url
   # warp:
   #   type: http
-  #   url: *url-warp 
+  #   url: *url-warp
   #   interval: *airport-interval
   #   path: *proxy-file-path-warp
   #   health-check:
@@ -986,7 +986,7 @@ proxy-providers:
   #     url: *health-check-url
   # local:
   #   type: http
-  #   url: *url-local 
+  #   url: *url-local
   #   interval: *airport-interval
   #   path: *proxy-file-path-local
   #   health-check:
@@ -1012,15 +1012,15 @@ rules:
   - RULE-SET,Apple,Apple
   - RULE-SET,Adobe,其他流量
   - RULE-SET,Amazon,Amazon
-  - RULE-SET,BiliBili,哔哩哔哩
+  - RULE-SET,Bilibili,Bilibili
   - RULE-SET,GitHub,国外流量
   - RULE-SET,Google,国外流量
   - RULE-SET,Copilot,Copilot
   - RULE-SET,OneDrive,OneDrive
   - RULE-SET,OutLook,OutLook
   - RULE-SET,Microsoft,Microsoft
-  - RULE-SET,Netflix,Netflix 
-  - RULE-SET,DisneyPlus,DisneyPlus 
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,DisneyPlus,DisneyPlus
   - RULE-SET,Hulu,Hulu
   - RULE-SET,HBO,HBO
   - RULE-SET,TikTok,TikTok
@@ -1030,115 +1030,114 @@ rules:
   - RULE-SET,Netch,Netch
   - RULE-SET,Spotify,Spotify
   - RULE-SET,PikPak,PikPak
-  - RULE-SET,Telegram,Telegram 
-  - RULE-SET,Twitter,国外流量 
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,国外流量
   - RULE-SET,Tencent,直接连接
-  - RULE-SET,YouTube,Youtube 
-  - RULE-SET,PayPal,Paypal
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,PayPal,PayPal
   - RULE-SET,Discord,Discord
   - RULE-SET,Facebook,Facebook
-  - RULE-SET,Reddit,Reddit 
-  - RULE-SET,JavSP,JavSP 
+  - RULE-SET,Reddit,Reddit
+  - RULE-SET,JavSP,JavSP
   - RULE-SET,Proxy,国外流量
   - RULE-SET,Direct,DIRECT
   - RULE-SET,IDM,IDM
   - DOMAIN-SUFFIX,live.cn,直接连接
-
   - GEOIP,CN,DIRECT
   - MATCH,其他流量
 
 rule-providers:
-  AdBlock: 
+  AdBlock:
     type: http
     behavior: classical
     path: *rule-file-path-AdBlock
     url: *rule-provider-url-AdBlock
     interval: *rule-interval
-  Apple: 
+  Apple:
     type: http
     behavior: classical
     path: *rule-file-path-Apple
     url: *rule-provider-url-Apple
     interval: *rule-interval
-  Adobe: 
+  Adobe:
     type: http
     behavior: classical
     path: *rule-file-path-Adobe
     url: *rule-provider-url-Adobe
     interval: *rule-interval
-  Amazon: 
+  Amazon:
     type: http
     behavior: classical
     path: *rule-file-path-Amazon
     url: *rule-provider-url-Amazon
     interval: *rule-interval
-  China: 
+  China:
     type: http
     behavior: classical
     path: *rule-file-path-China
     url: *rule-provider-url-China
     interval: *rule-interval
-  BiliBili: 
+  Bilibili:
     type: http
     behavior: classical
-    path: *rule-file-path-BiliBili
-    url: *rule-provider-url-BiliBili
+    path: *rule-file-path-Bilibili
+    url: *rule-provider-url-Bilibili
     interval: *rule-interval
-  Facebook: 
+  Facebook:
     type: http
     behavior: classical
     path: *rule-file-path-Facebook
     url: *rule-provider-url-Facebook
     interval: *rule-interval
-  GitHub: 
+  GitHub:
     type: http
     behavior: classical
     path: *rule-file-path-GitHub
     url: *rule-provider-url-GitHub
     interval: *rule-interval
-  Google: 
+  Google:
     type: http
     behavior: classical
     path: *rule-file-path-Google
     url: *rule-provider-url-Google
     interval: *rule-interval
-  Microsoft: 
+  Microsoft:
     type: http
     behavior: classical
     path: *rule-file-path-Microsoft
     url: *rule-provider-url-Microsoft
     interval: *rule-interval
-  OneDrive: 
+  OneDrive:
     type: http
     behavior: classical
     path: *rule-file-path-OneDrive
     url: *rule-provider-url-OneDrive
     interval: *rule-interval
-  OutLook: 
+  OutLook:
     type: http
     behavior: classical
     path: *rule-file-path-OutLook
     url: *rule-provider-url-OutLook
     interval: *rule-interval
-  OpenAI: 
+  OpenAI:
     type: http
     behavior: classical
     path: *rule-file-path-OpenAI
     url: *rule-provider-url-OpenAI
     interval: *rule-interval
-  Claude: 
+  Claude:
     type: http
     behavior: classical
     path: *rule-file-path-Claude
     url: *rule-provider-url-Claude
     interval: *rule-interval
-  Gemini: 
+  Gemini:
     type: http
     behavior: classical
     path: *rule-file-path-Gemini
     url: *rule-provider-url-Gemini
     interval: *rule-interval
-  Copilot: 
+  Copilot:
     type: http
     behavior: classical
     path: *rule-file-path-Copilot
@@ -1150,145 +1149,145 @@ rule-providers:
     path: *rule-file-path-Perplexity
     url: *rule-provider-url-Perplexity
     interval: *rule-interval
-  Netflix: 
+  Netflix:
     type: http
     behavior: classical
     path: *rule-file-path-Netflix
     url: *rule-provider-url-Netflix
     interval: *rule-interval
-  Netch: 
+  Netch:
     type: http
     behavior: classical
     path: *rule-file-path-Netch
     url: *rule-provider-url-Netch
     interval: *rule-interval
-  Spotify: 
+  Spotify:
     type: http
     behavior: classical
     path: *rule-file-path-Spotify
     url: *rule-provider-url-Spotify
     interval: *rule-interval
-  Speedtest: 
+  Speedtest:
     type: http
     behavior: classical
     path: *rule-file-path-Speedtest
     url: *rule-provider-url-Speedtest
     interval: *rule-interval
-  Steam: 
+  Steam:
     type: http
     behavior: classical
     path: *rule-file-path-Steam
     url: *rule-provider-url-Steam
     interval: *rule-interval
-  Ubisoft: 
+  Ubisoft:
     type: http
     behavior: classical
     path: *rule-file-path-Ubisoft
     url: *rule-provider-url-Ubisoft
     interval: *rule-interval
-  Telegram: 
+  Telegram:
     type: http
     behavior: classical
     path: *rule-file-path-Telegram
     url: *rule-provider-url-Telegram
     interval: *rule-interval
-  Twitter: 
+  Twitter:
     type: http
     behavior: classical
     path: *rule-file-path-Twitter
     url: *rule-provider-url-Twitter
     interval: *rule-interval
-  Tencent: 
+  Tencent:
     type: http
     behavior: classical
     path: *rule-file-path-Tencent
     url: *rule-provider-url-Tencent
     interval: *rule-interval
-  YouTube: 
+  YouTube:
     type: http
     behavior: classical
     path: *rule-file-path-YouTube
     url: *rule-provider-url-YouTube
     interval: *rule-interval
-  TikTok: 
+  TikTok:
     type: http
     behavior: classical
     path: *rule-file-path-TikTok
-    url: *rule-provider-url-TikTok 
+    url: *rule-provider-url-TikTok
     interval: *rule-interval
-  PayPal: 
+  PayPal:
     type: http
     behavior: classical
     path: *rule-file-path-PayPal
-    url: *rule-provider-url-PayPal 
+    url: *rule-provider-url-PayPal
     interval: *rule-interval
-  Discord: 
+  Discord:
     type: http
     behavior: classical
     path: *rule-file-path-Discord
-    url: *rule-provider-url-Discord 
+    url: *rule-provider-url-Discord
     interval: *rule-interval
-  Proxy: 
+  Proxy:
     type: http
     behavior: classical
     path: *rule-file-path-Proxy
-    url: *rule-provider-url-Proxy 
+    url: *rule-provider-url-Proxy
     interval: *rule-interval
-  ProxyClient: 
+  ProxyClient:
     type: http
     behavior: classical
     path: *rule-file-path-ProxyClient
-    url: *rule-provider-url-ProxyClient 
+    url: *rule-provider-url-ProxyClient
     interval: *rule-interval
-  DisneyPlus: 
+  DisneyPlus:
     type: http
     behavior: classical
     path: *rule-file-path-DisneyPlus
-    url: *rule-provider-url-DisneyPlus 
+    url: *rule-provider-url-DisneyPlus
     interval: *rule-interval
-  Hulu: 
+  Hulu:
     type: http
     behavior: classical
     path: *rule-file-path-Hulu
-    url: *rule-provider-url-Hulu 
+    url: *rule-provider-url-Hulu
     interval: *rule-interval
-  HBO: 
+  HBO:
     type: http
     behavior: classical
     path: *rule-file-path-HBO
     url: *rule-provider-url-HBO
     interval: *rule-interval
-  Direct: 
+  Direct:
     type: http
     behavior: classical
     path: *rule-file-path-Direct
     url: *rule-provider-url-Direct
     interval: *rule-interval
-  DownLoadClient: 
+  DownLoadClient:
     type: http
     behavior: classical
     path: *rule-file-path-DownLoadClient
     url: *rule-provider-url-DownLoadClient
     interval: *rule-interval
-  IDM: 
+  IDM:
     type: http
     behavior: classical
     path: *rule-file-path-IDM
     url: *rule-provider-url-IDM
     interval: *rule-interval
-  PikPak: 
+  PikPak:
     type: http
     behavior: classical
     path: *rule-file-path-PikPak
     url: *rule-provider-url-PikPak
     interval: *rule-interval
-  JavSP: 
+  JavSP:
     type: http
     behavior: classical
     path: *rule-file-path-JavSP
     url: *rule-provider-url-JavSP
     interval: *rule-interval
-  Reddit: 
+  Reddit:
     type: http
     behavior: classical
     path: *rule-file-path-Reddit
