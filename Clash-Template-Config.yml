@@ -1,3 +1,5 @@
+# Jinja2 template for Clash
+# Clash 配置模板
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 基础数据 设置锚点 复用
 BASE-DATA:
@@ -178,15 +180,16 @@ BASE-DATA:
       # - local
     proxy-providers-common:
       airport-interval: &airport-interval 36000
-      url-airport: &url-airport "" # 这里填入机场链接
+      url-airport: &url-airport "" # 这里填入airport的配置链接
       proxy-file-path-airport: &proxy-file-path-airport myprovider/proxies/provider-airport.yml
-      url-add-on: &url-add-on "" # 这里填入第二个机场链接
+      url-add-on: &url-add-on "" # 这里填入add-on的配置链接
       proxy-file-path-add-on: &proxy-file-path-add-on myprovider/proxies/provider-add-on.yml
-      url-warp: &url-warp "" # 这里填入直接托管的WARP配置
+      url-warp: &url-warp "" # 这里填入warp的配置链接
       proxy-file-path-warp: &proxy-file-path-warp myprovider/proxies/provider-warp.yml
-      url-local: &url-local "" # 这里填入直接托管的本地代理配置
+      url-local: &url-local "" # 这里填入local的配置链接
       proxy-file-path-local: &proxy-file-path-local myprovider/proxies/provider-local.yml
     proxy-providers-filter:
+      proxy-filter-Local: &proxy-filter-Local ''
       proxy-filter-WARP: &proxy-filter-WARP 'WARP+'
       proxy-filter-HK: &proxy-filter-HK '港|HK|HongKong|Hong Kong'
       proxy-filter-TW: &proxy-filter-TW '台湾|TW|Taiwan'
@@ -411,6 +414,7 @@ log-level: silent
 ipv6: false
 external-controller: '0.0.0.0:9090'
 
+# DNS partial template
 # DNS 服务器配置(可选；若不配置，程序内置的 DNS 服务会被关闭)
 dns:
   enable: true
@@ -522,6 +526,7 @@ dns:
     - '*.ffxiv.com'
     - '*.mcdn.bilivideo.cn'
     - WORKGROUP
+    
 
   # 支持 UDP / TCP / DoT / DoH 协议的 DNS 服务，可以指明具体的连接端口号。
   # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
@@ -577,9 +582,8 @@ profile:
 
 proxies:
 
+# Proxy-groups partial template
 proxy-groups:
-  # relay chains the proxies. proxies shall not contain a relay. No UDP support.
-  # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
   # -
   #   name: Foreign-StrategySwitch
   #   icon: *icon-Area
@@ -599,8 +603,8 @@ proxy-groups:
   # -
   #   name: Foreign-AUTO
   #   icon: *icon-Auto
-  #   type: url-test
-  #   url: *health-check-url
+  #   type: url-test  
+  #   url: *health-check-url  
   #   interval: 30
   #   proxies:
   #     - Local-Proxy
@@ -608,8 +612,8 @@ proxy-groups:
   # -
   #   name: Other-AUTO
   #   icon: *icon-Auto
-  #   type: url-test
-  #   url: *health-check-url
+  #   type: url-test  
+  #   url: *health-check-url  
   #   interval: 30
   #   proxies:
   #     - Local-Proxy
@@ -617,18 +621,18 @@ proxy-groups:
   # -
   #   name: Local-Proxy
   #   icon: *icon-Proxy
-  #   type: fallback
-  #   url: *health-check-url
-  #   interval: 6
-  #   filter: ''
-  #   use:
+  #   type: fallback  
+  #   url: *health-check-url  
+  #   interval: 6  
+  #   filter: *proxy-filter-Local  
+  #   use:  
   #     - local
   # -
   #   name: Foreign-SELECT
   #   icon: *icon-Final
   #   type: select
   #   proxies:
-  #     *proxies-all-oforeign    
+  #     *proxies-all-oforeign
   # -
   #   name: Other-SELECT
   #   icon: *icon-Final
@@ -710,32 +714,32 @@ proxy-groups:
   -
     name: Netflix
     icon: *icon-Netflix
-    type: select
-    filter: *proxy-filter-special-streaming-media
+    type: select  
+    filter: *proxy-filter-special-streaming-media  
     use: *proxy-providers-use
     proxies:
       *proxies-all
   -
     name: DisneyPlus
     icon: *icon-Disney
-    type: select
-    filter: *proxy-filter-special-streaming-media
+    type: select  
+    filter: *proxy-filter-special-streaming-media  
     use: *proxy-providers-use
     proxies:
       *proxies-all
   -
     name: Hulu
     icon: *icon-Hulu
-    type: select
-    filter: *proxy-filter-special-streaming-media
+    type: select  
+    filter: *proxy-filter-special-streaming-media  
     use: *proxy-providers-use
     proxies:
       *proxies-all
   -
     name: HBO
     icon: *icon-HBO
-    type: select
-    filter: *proxy-filter-special-streaming-media
+    type: select  
+    filter: *proxy-filter-special-streaming-media  
     use: *proxy-providers-use
     proxies:
       *proxies-all
@@ -846,91 +850,91 @@ proxy-groups:
   -
     name: AIRPORT
     icon: *icon-Airport
-    type: select
+    type: select  
     use: *proxy-providers-use
   -
     name: 🇭🇰 AIRPORT-HK
     icon: *icon-Hong_Kong
-    type: select
-    filter: *proxy-filter-HK
+    type: select  
+    filter: *proxy-filter-HK  
     use: *proxy-providers-use
   -
     name: 🇨🇳 AIRPORT-TW
     icon: *icon-Taiwan
-    type: select
-    filter: *proxy-filter-TW
+    type: select  
+    filter: *proxy-filter-TW  
     use: *proxy-providers-use
   -
     name: 🇸🇬 AIRPORT-SG
     icon: *icon-Singapore
-    type: select
-    filter: *proxy-filter-SG
+    type: select  
+    filter: *proxy-filter-SG  
     use: *proxy-providers-use
   -
     name: 🇯🇵 AIRPORT-JP
     icon: *icon-Japan
-    type: select
-    filter: *proxy-filter-JP
+    type: select  
+    filter: *proxy-filter-JP  
     use: *proxy-providers-use
   -
     name: 🇰🇷 AIRPORT-Korea
     icon: *icon-Korea
-    type: select
-    filter: *proxy-filter-Korea
+    type: select  
+    filter: *proxy-filter-Korea  
     use: *proxy-providers-use
   -
     name: 🇺🇸 AIRPORT-US
     icon: *icon-United_States
-    type: select
-    filter: *proxy-filter-US
+    type: select  
+    filter: *proxy-filter-US  
     use: *proxy-providers-use
   -
     name: 🇮🇳 AIRPORT-India
     icon: *icon-India
-    type: select
-    filter: *proxy-filter-India
+    type: select  
+    filter: *proxy-filter-India  
     use: *proxy-providers-use
   -
     name: 🇬🇧 AIRPORT-EN
     icon: *icon-United_Kingdom
-    type: select
-    filter: *proxy-filter-EN
+    type: select  
+    filter: *proxy-filter-EN  
     use: *proxy-providers-use
   -
     name: 🇮🇪 AIRPORT-Ireland
     icon: *icon-United_Kingdom
-    type: select
-    filter: *proxy-filter-Ireland
+    type: select  
+    filter: *proxy-filter-Ireland  
     use: *proxy-providers-use
   -
     name: 🇷🇺 AIRPORT-RU
     icon: *icon-Russia
-    type: select
-    filter: *proxy-filter-RU
+    type: select  
+    filter: *proxy-filter-RU  
     use: *proxy-providers-use
   -
     name: 🇨🇦 AIRPORT-Canada
     icon: *icon-Canada
-    type: select
-    filter: *proxy-filter-Canada
+    type: select  
+    filter: *proxy-filter-Canada  
     use: *proxy-providers-use
   -
     name: 🇫🇷 AIRPORT-FR
     icon: *icon-France
-    type: select
-    filter: *proxy-filter-FR
+    type: select  
+    filter: *proxy-filter-FR  
     use: *proxy-providers-use
   -
     name: 🇦🇺 AIRPORT-AU
     icon: *icon-Australia
-    type: select
-    filter: *proxy-filter-AU
+    type: select  
+    filter: *proxy-filter-AU  
     use: *proxy-providers-use
   -
     name: WARP+
     icon: *icon-Cloudflare
-    type: select
-    filter: *proxy-filter-WARP
+    type: select  
+    filter: *proxy-filter-WARP  
     use: *proxy-providers-use
   -
     name: ProxyChain_Start
@@ -948,53 +952,32 @@ proxy-groups:
     name: ProxyChain
     icon: *icon-Proxy
     type: relay
-    # disable-udp: true
     proxies:
       - ProxyChain_Start
       - ProxyChain_Landing
-
+# Proxy-providers partial template
 proxy-providers:
   airport:
     type: http
     url: *url-airport
     interval: *airport-interval
     path: *proxy-file-path-airport
-    health-check:
-      enable: true
-      interval: *airport-interval
-      # lazy: true
-      url: *health-check-url
   # add-on:
   #   type: http
   #   url: *url-add-on
   #   interval: *airport-interval
   #   path: *proxy-file-path-add-on
-  #   health-check:
-  #     enable: true
-  #     interval: *airport-interval
-  #     # lazy: true
-  #     url: *health-check-url
   # warp:
   #   type: http
   #   url: *url-warp
   #   interval: *airport-interval
   #   path: *proxy-file-path-warp
-  #   health-check:
-  #     enable: true
-  #     interval: *airport-interval
-  #     # lazy: true
-  #     url: *health-check-url
   # local:
   #   type: http
   #   url: *url-local
   #   interval: *airport-interval
   #   path: *proxy-file-path-local
-  #   health-check:
-  #     enable: true
-  #     interval: *airport-interval
-  #     # lazy: true
-  #     url: *health-check-url
-
+# Rules partial template
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
@@ -1046,6 +1029,7 @@ rules:
   - GEOIP,CN,DIRECT
   - MATCH,其他流量
 
+# Rule-providers partial template
 rule-providers:
   AdBlock:
     type: http
