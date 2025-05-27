@@ -180,13 +180,13 @@ BASE-DATA:
       # - local
     proxy-providers-common:
       airport-interval: &airport-interval 36000
-      url-airport: &url-airport "" # 这里填入airport的配置链接
+      url-airport: &url-airport ""  # 这里填入airport的配置链接
       proxy-file-path-airport: &proxy-file-path-airport myprovider/proxies/provider-airport.yml
-      url-add-on: &url-add-on "" # 这里填入add-on的配置链接
+      url-add-on: &url-add-on ""  # 这里填入add-on的配置链接
       proxy-file-path-add-on: &proxy-file-path-add-on myprovider/proxies/provider-add-on.yml
-      url-warp: &url-warp "" # 这里填入warp的配置链接
+      url-warp: &url-warp ""  # 这里填入warp的配置链接
       proxy-file-path-warp: &proxy-file-path-warp myprovider/proxies/provider-warp.yml
-      url-local: &url-local "" # 这里填入local的配置链接
+      url-local: &url-local ""  # 这里填入local的配置链接
       proxy-file-path-local: &proxy-file-path-local myprovider/proxies/provider-local.yml
     proxy-providers-filter:
       proxy-filter-Local: &proxy-filter-Local ''
