@@ -222,6 +222,9 @@ BASE-DATA:
       AdBlock:
         rule-file-path-AdBlock: &rule-file-path-AdBlock myprovider/ruleset/AdBlock.yaml
         rule-provider-url-AdBlock: &rule-provider-url-AdBlock https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/AdBlock.yaml
+      AWAvenue-Ads-Rule:
+        rule-file-path-AWAvenue-Ads-Rule: &rule-file-path-AWAvenue-Ads-Rule myprovider/ruleset/AWAvenue-Ads-Rule.yaml
+        rule-provider-url-AWAvenue-Ads-Rule: &rule-provider-url-AWAvenue-Ads-Rule https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/AWAvenue-Ads-Rule.yaml
       Apple:
         rule-file-path-Apple: &rule-file-path-Apple myprovider/ruleset/Apple.yaml
         rule-provider-url-Apple: &rule-provider-url-Apple https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Apple.yaml
