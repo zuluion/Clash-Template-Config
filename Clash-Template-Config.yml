@@ -23,7 +23,6 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
       - WARP+
-      - ProxyChain
     proxies-all-fdirect: &proxies-all-fdirect
       - 直接连接
       - 国外流量
@@ -42,7 +41,6 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
       - WARP+
-      - ProxyChain
     proxies-all-oforeign: &proxies-all-oforeign
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
@@ -59,8 +57,8 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
       - WARP+
-      - ProxyChain
-    proxies-all-for-proxychain: &proxies-all-for-proxychain
+    proxies-all-for-proxydialer: &proxies-all-for-proxydialer
+      - 直接连接
       - 🇭🇰 AIRPORT-HK
       - 🇨🇳 AIRPORT-TW
       - 🇸🇬 AIRPORT-SG
@@ -95,6 +93,7 @@ BASE-DATA:
     proxies-all-for-openai: &proxies-all-for-openai
       - 🇰🇷 AIRPORT-Korea
       - 🇯🇵 AIRPORT-JP
+      - 🇭🇰 AIRPORT-HK
       - 🇺🇸 AIRPORT-US
       - 🇸🇬 AIRPORT-SG
       - 🇬🇧 AIRPORT-EN
@@ -154,7 +153,6 @@ BASE-DATA:
       - 🇦🇺 AIRPORT-AU
       - AIRPORT
       - WARP+
-      - ProxyChain
     proxies-all-for-reddit: &proxies-all-for-reddit
       - 🇺🇸 AIRPORT-US
       - 国外流量
@@ -940,46 +938,42 @@ proxy-groups:
     filter: *proxy-filter-WARP  
     use: *proxy-providers-use
   -
-    name: ProxyChain_Start
+    name: ProxyDialer
     icon: *icon-Proxy
     type: select
     proxies:
-      *proxies-all-for-proxychain
-  -
-    name: ProxyChain_Landing
-    icon: *icon-Proxy
-    type: select
-    proxies:
-      *proxies-all-for-proxychain
-  -
-    name: ProxyChain
-    icon: *icon-Proxy
-    type: relay
-    proxies:
-      - ProxyChain_Start
-      - ProxyChain_Landing
+      *proxies-all-for-proxydialer
 # Proxy-providers partial template
 proxy-providers:
   airport:
     type: http
+    override:
+      dialer-proxy: ProxyDialer
     url: *url-airport
     interval: *airport-interval
     path: *proxy-file-path-airport
   # add-on:
   #   type: http
+  #   override:
+  #     dialer-proxy: ProxyDialer
   #   url: *url-add-on
   #   interval: *airport-interval
   #   path: *proxy-file-path-add-on
   # warp:
   #   type: http
+  #   override:
+  #     dialer-proxy: ProxyDialer
   #   url: *url-warp
   #   interval: *airport-interval
   #   path: *proxy-file-path-warp
   # local:
   #   type: http
+  #   override:
+  #     dialer-proxy: ProxyDialer
   #   url: *url-local
   #   interval: *airport-interval
   #   path: *proxy-file-path-local
+
 # Rules partial template
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
