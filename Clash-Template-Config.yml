@@ -21,6 +21,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
       - WARP+
     proxies-all-fdirect: &proxies-all-fdirect
@@ -39,6 +40,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
       - WARP+
     proxies-all-oforeign: &proxies-all-oforeign
@@ -55,6 +57,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
       - WARP+
     proxies-all-for-proxydialer: &proxies-all-for-proxydialer
@@ -72,6 +75,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
       - WARP+
     proxies-all-for-tiktok: &proxies-all-for-tiktok
@@ -90,6 +94,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
     proxies-all-for-openai: &proxies-all-for-openai
       - 🇰🇷 AIRPORT-Korea
       - 🇯🇵 AIRPORT-JP
@@ -101,6 +106,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
     proxies-all-for-claude: &proxies-all-for-claude
       - 🇬🇧 AIRPORT-EN
@@ -112,6 +118,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
     proxies-all-for-gemini: &proxies-all-for-gemini
       - 🇺🇸 AIRPORT-US
@@ -123,6 +130,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
     proxies-all-for-perplexity: &proxies-all-for-perplexity
       - 🇺🇸 AIRPORT-US
@@ -134,6 +142,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
     proxies-all-for-javsp: &proxies-all-for-javsp
       - 🇯🇵 AIRPORT-JP
@@ -151,6 +160,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
       - AIRPORT
       - WARP+
     proxies-all-for-reddit: &proxies-all-for-reddit
@@ -169,6 +179,7 @@ BASE-DATA:
       - 🇨🇦 AIRPORT-Canada
       - 🇫🇷 AIRPORT-FR
       - 🇦🇺 AIRPORT-AU
+      - 🇩🇪 AIRPORT-DE
 
   proxy-providers-config:
     proxy-providers-use: &proxy-providers-use
@@ -189,29 +200,30 @@ BASE-DATA:
     proxy-providers-filter:
       proxy-filter-Local: &proxy-filter-Local ''
       proxy-filter-WARP: &proxy-filter-WARP 'WARP+'
-      proxy-filter-HK: &proxy-filter-HK '港|HK|HongKong|Hong Kong'
-      proxy-filter-TW: &proxy-filter-TW '台湾|TW|Taiwan'
-      proxy-filter-SG: &proxy-filter-SG '新加坡|SG|Singapore'
-      proxy-filter-JP: &proxy-filter-JP '日本|JP|Japan'
-      proxy-filter-FR: &proxy-filter-FR '法国|FR|France'
-      proxy-filter-AU: &proxy-filter-AU '澳大利亚|AU|Australia'
-      proxy-filter-Ireland: &proxy-filter-Ireland '爱尔兰|Ireland'
-      proxy-filter-EN: &proxy-filter-EN '英国|UK|Britain|England'
-      proxy-filter-Korea: &proxy-filter-Korea '韩国|KR|Korean'
-      proxy-filter-RU: &proxy-filter-RU '俄罗斯|RU|Russia'
-      proxy-filter-US: &proxy-filter-US '美国|US|United States|America'
-      proxy-filter-Canada: &proxy-filter-Canada '加拿大|CA|Canada'
-      proxy-filter-India: &proxy-filter-India '印度|IN|India'
-      proxy-filter-TR: &proxy-filter-TR '土耳其|TUR|Turkey'
-      proxy-filter-TL: &proxy-filter-TL '泰国|TH|Thailand'
-      proxy-filter-AGT: &proxy-filter-AGT '阿根廷|AR|Argentina'
-      proxy-filter-PLP: &proxy-filter-PLP '菲律宾|PH|Philippines'
-      proxy-filter-Malaysia: &proxy-filter-Malaysia '马来西亚|MY|Malaysia'
-      proxy-filter-special-streaming-media: &proxy-filter-special-streaming-media '港|HK|HongKong|台湾|TW|Taiwan|新加坡|SG|Singapore|日本|JP|Japan|韩国|KR|Korean|美国|US|United States|America'
-      proxy-filter-BR: &proxy-filter-BR '巴西|BR|Brazil'
-      proxy-filter-UA: &proxy-filter-UA '乌克兰|UA|Ukraine'
-      proxy-filter-VN: &proxy-filter-VN '越南|VN|Viet Nam'
-      proxy-filter-ZA: &proxy-filter-ZA '南非|ZA|South Africa'
+      proxy-filter-HK: &proxy-filter-HK '(?i)🇭🇰|香港|港|hongkong|hong kong|hkg|hk'
+      proxy-filter-TW: &proxy-filter-TW '(?i)🇹🇼|台湾|臺灣|taiwan|twn|tw'
+      proxy-filter-SG: &proxy-filter-SG '(?i)🇸🇬|新加坡|狮城|singapore|sgp|sin|sg'
+      proxy-filter-JP: &proxy-filter-JP '(?i)🇯🇵|日本|japan|jpn|jp'
+      proxy-filter-FR: &proxy-filter-FR '(?i)🇫🇷|法国|france|fra|fr'
+      proxy-filter-AU: &proxy-filter-AU '(?i)🇦🇺|澳大利亚|澳洲|australia|aus|au'
+      proxy-filter-DE: &proxy-filter-DE '(?i)🇩🇪|德国|德國|germany|deutschland|deu|de'
+      proxy-filter-Ireland: &proxy-filter-Ireland '(?i)🇮🇪|爱尔兰|ireland|irl|ie'
+      proxy-filter-EN: &proxy-filter-EN '(?i)🇬🇧|英国|united kingdom|britain|england|gbr|uk|gb'
+      proxy-filter-Korea: &proxy-filter-Korea '(?i)🇰🇷|韩国|韓|korea|korean|kor|kr'
+      proxy-filter-RU: &proxy-filter-RU '(?i)🇷🇺|俄罗斯|russia|russian|rus|ru'
+      proxy-filter-US: &proxy-filter-US '(?i)🇺🇸|美国|united states|america|usa|us'
+      proxy-filter-Canada: &proxy-filter-Canada '(?i)🇨🇦|加拿大|canada|can|ca'
+      proxy-filter-India: &proxy-filter-India '(?i)🇮🇳|印度|india|ind|in'
+      proxy-filter-TR: &proxy-filter-TR '(?i)🇹🇷|土耳其|turkey|tur|tr'
+      proxy-filter-TL: &proxy-filter-TL '(?i)🇹🇭|泰国|thailand|tha|th'
+      proxy-filter-AGT: &proxy-filter-AGT '(?i)🇦🇷|阿根廷|argentina|arg|ar'
+      proxy-filter-PLP: &proxy-filter-PLP '(?i)🇵🇭|菲律宾|philippines|phl|ph'
+      proxy-filter-Malaysia: &proxy-filter-Malaysia '(?i)🇲🇾|马来西亚|大马|malaysia|mys|my'
+      proxy-filter-special-streaming-media: &proxy-filter-special-streaming-media '(?i)🇭🇰|香港|港|hk|🇹🇼|台湾|tw|🇸🇬|新加坡|sg|🇯🇵|日本|jp|🇰🇷|韩国|kr|🇺🇸|美国|us'
+      proxy-filter-BR: &proxy-filter-BR '(?i)🇧🇷|巴西|brazil|brasil|bra|br'
+      proxy-filter-UA: &proxy-filter-UA '(?i)🇺🇦|乌克兰|ukraine|ukr|ua'
+      proxy-filter-VN: &proxy-filter-VN '(?i)🇻🇳|越南|vietnam|viet nam|vnm|vn'
+      proxy-filter-ZA: &proxy-filter-ZA '(?i)🇿🇦|南非|south africa|zaf|za'
 
   rule-providers-config:
     rule-providers-common:
@@ -386,6 +398,7 @@ BASE-DATA:
     icon-Canada: &icon-Canada https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Canada.png
     icon-France: &icon-France https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/France.png
     icon-Australia: &icon-Australia https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Australia.png
+    icon-Germany: &icon-Germany https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Germany.png
     icon-Turkey: &icon-Turkey https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Turkey.png
     icon-Thailand: &icon-Thailand https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Thailand.png
     icon-Argentina: &icon-Argentina https://cdn.jsdelivr.net/gh/zuluion/Qure/IconSet/Color/Argentina.png
@@ -948,6 +961,12 @@ proxy-groups:
     icon: *icon-Australia
     type: select  
     filter: *proxy-filter-AU  
+    use: *proxy-providers-use
+  -
+    name: 🇩🇪 AIRPORT-DE
+    icon: *icon-Germany
+    type: select  
+    filter: *proxy-filter-DE  
     use: *proxy-providers-use
   -
     name: WARP+
